@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<!--
+	Mehta Research Group, University of Illinois Urbana-Champaign
+	Built on TXT by HTML5 UP (html5up.net | @ajlkn), CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Awards | MEHTA Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Awards and honors of Prof. Prashant G. Mehta and the Mehta Lab: IEEE Fellow, best paper awards and teaching awards." />
+		<meta property="og:title" content="Awards | Mehta Lab" />
+		<meta property="og:description" content="Awards and honors of Prof. Prashant G. Mehta and the Mehta Lab: IEEE Fellow, best paper awards and teaching awards." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/mehta.css" />
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	</head>
+	<body class="no-sidebar awards is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="index.html" id="logo">Mehta Lab</a></h1>
+							<p>Mechanical Science and Engineering, University of Illinois Urbana-Champaign</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav (dropdowns are handled by jquery.dropotron; on phones main.js turns this into a slide-out panel) -->
+				<nav id="nav">
+					<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="team.html">Team</a></li>
+					<li>
+						<a href="research.html">Research</a>
+						<ul>
+							<li><a href="research.html#rl-hmm">Reinforcement Learning &amp; HMMs</a></li>
+							<li><a href="research.html#filtering">Particle &amp; Nonlinear Filtering</a></li>
+							<li><a href="research.html#kalman">Kalman Filtering &amp; Stochastic Control</a></li>
+							<li><a href="research.html#soft-robotics">Past Projects</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="teaching.html">Teaching</a>
+						<ul>
+							<li><a href="teaching.html#me360">ME 360 Signal Processing</a></li>
+							<li><a href="teaching.html#tam541">TAM 541 Mathematical Methods I</a></li>
+							<li><a href="teaching.html#tam542">TAM 542 Mathematical Methods II</a></li>
+							<li><a href="teaching.html#ece515">ECE 515 Control System Theory &amp; Design</a></li>
+							<li><a href="teaching.html#ece528">ECE 528 Analysis of Nonlinear Systems</a></li>
+						</ul>
+					</li>
+					<li class="current"><a href="awards.html">Awards</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					</ul>
+				</nav>
+
+			<!-- Hero: a particle swarm searching for the highest peak (assets/js/peak-hero.js) -->
+				<section id="banner" class="fpf-hero is-short is-awards" style="background-image: url('images/Awards_Banner.jpg');">
+					<canvas id="peak-canvas" aria-label="Animation: a swarm of dots searches a hilly landscape and gathers on its highest peak, marked with a star. Click to scatter the swarm." role="img"></canvas>
+					<h2 class="hero-phrase">Awards</h2>
+					<div class="hero-caption">
+						<p><span class="key particle" style="background:#fff"></span>searchers <span class="key truth"></span>consensus <span class="key-star" aria-hidden="true">&#9733;</span> highest peak</p>
+						<p>No map, no gradient: they find the top by agreeing.</p>
+						<div class="hero-controls">
+							<button type="button" id="peak-new">New landscape</button>
+							<button type="button" id="peak-pause" aria-pressed="false">Pause</button>
+						</div>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<header class="page-intro">
+							<p>
+								The banner is a swarm searching a landscape it cannot see for its highest peak, using consensus-based optimization:
+								each searcher is pulled toward a consensus that favors whoever stands highest. Climbing to the top together,
+								students and advisor, is how most of the honors below were earned.
+							</p>
+						</header>
+
+						<!-- Highlights -->
+						<section class="award-hero">
+							<div class="fellow">
+								<p class="fellow-kicker">2024</p>
+								<h3>IEEE Fellow</h3>
+								<p class="fellow-cite">&ldquo;For contributions to nonlinear filtering.&rdquo;</p>
+							</div>
+							<ul class="award-stats">
+								<li><strong>3</strong><span>Best Student Paper Awards at IEEE CDC, all won by students in the group</span></li>
+								<li><strong>12</strong><span>semesters on the List of Teachers Ranked as Excellent</span></li>
+								<li><strong>2</strong><span>MechSE Alumni Effective Teaching Awards, voted by former students</span></li>
+							</ul>
+						</section>
+
+						<div class="row gtr-150">
+
+							<!-- Full list, filterable -->
+							<div class="col-8 col-12-medium">
+								<h2 class="major"><span>All awards</span></h2>
+								<div class="award-filters" role="group" aria-label="Filter awards">
+									<button type="button" data-filter="all" aria-pressed="true">All</button>
+									<button type="button" data-filter="research" aria-pressed="false">Research</button>
+									<button type="button" data-filter="teaching" aria-pressed="false">Teaching</button>
+									<button type="button" data-filter="honors" aria-pressed="false">Honors</button>
+								</div>
+								<!-- Awards, newest first. Copy an <li class="award"> to add one; data-cat is research, teaching or honors. -->
+								<ol class="award-list">
+								<li class="award" data-cat="teaching">
+									<span class="award-year">2025</span>
+									<div class="award-body">
+										<span class="award-tag tag-teaching">Teaching</span>
+										<h4>MechSE Alumni Five-Year Effective Teaching Award</h4>
+										<p>Voted by alumni five years into their careers, for the teacher who had the greatest impact on them. <a href="https://mechse.illinois.edu/news/74770">Read the story</a></p>
+									</div>
+								</li>
+								<li class="award" data-cat="honors">
+									<span class="award-year">2024</span>
+									<div class="award-body">
+										<span class="award-tag tag-honors">Honor</span>
+										<h4>IEEE Fellow</h4>
+										<p>Class of 2024, &ldquo;for contributions to nonlinear filtering.&rdquo;</p>
+									</div>
+								</li>
+								<li class="award" data-cat="research">
+									<span class="award-year">2019</span>
+									<div class="award-body">
+										<span class="award-tag tag-research">Research</span>
+										<h4>Best Student Paper Award, IEEE Conference on Decision and Control</h4>
+										<p>Nice, France. With Jin Won Kim, for &ldquo;What is the Lagrangian for Nonlinear Filtering?&rdquo; <a href="https://ieeexplore.ieee.org/document/9030206">Paper</a></p>
+									</div>
+								</li>
+								<li class="award" data-cat="teaching">
+									<span class="award-year">2017</span>
+									<div class="award-body">
+										<span class="award-tag tag-teaching">Teaching</span>
+										<h4>MechSE Alumni Effective Teaching Award</h4>
+										<p>Department of Mechanical Science and Engineering, University of Illinois.</p>
+									</div>
+								</li>
+								<li class="award" data-cat="research">
+									<span class="award-year">2012</span>
+									<div class="award-body">
+										<span class="award-tag tag-research">Research</span>
+										<h4>Plenary lecture, IFAC NecSys Workshop</h4>
+										<p>3rd IFAC Workshop on Distributed Estimation and Control in Networked Systems, Santa Barbara.</p>
+									</div>
+								</li>
+								<li class="award" data-cat="research">
+									<span class="award-year is-repeat" aria-hidden="true">2012</span>
+									<div class="award-body">
+										<span class="award-tag tag-research">Research</span>
+										<h4>Finalist, Best Student Paper Award, IEEE CDC</h4>
+										<p>Hawaii. With Tao Yang, for &ldquo;Multivariable Feedback Particle Filter.&rdquo; <a href="https://ieeexplore.ieee.org/document/6425937/">Paper</a></p>
+									</div>
+								</li>
+								<li class="award" data-cat="research">
+									<span class="award-year">2010</span>
+									<div class="award-body">
+										<span class="award-tag tag-research">Research</span>
+										<h4>Finalist, Best Student Paper Award, American Control Conference</h4>
+										<p>Baltimore. With Huibing Yin, for &ldquo;Synchronization of coupled oscillators is a game.&rdquo; <a href="https://ieeexplore.ieee.org/document/5531465/">Paper</a></p>
+									</div>
+								</li>
+								<li class="award" data-cat="teaching">
+									<span class="award-year is-repeat" aria-hidden="true">2010</span>
+									<div class="award-body">
+										<span class="award-tag tag-teaching">Teaching</span>
+										<h4>Excellence in Undergraduate Advising Award</h4>
+										<p>College of Engineering, University of Illinois. Also received in 2008.</p>
+									</div>
+								</li>
+								<li class="award" data-cat="research">
+									<span class="award-year">2009</span>
+									<div class="award-body">
+										<span class="award-tag tag-research">Research</span>
+										<h4>Best Student Paper Award, IEEE Conference on Decision and Control</h4>
+										<p>Shanghai. With Kun Deng, for &ldquo;A simulation-based method for aggregating Markov chains.&rdquo; <a href="https://ieeexplore.ieee.org/document/5400533/">Paper</a></p>
+									</div>
+								</li>
+								<li class="award" data-cat="research">
+									<span class="award-year is-repeat" aria-hidden="true">2009</span>
+									<div class="award-body">
+										<span class="award-tag tag-research">Research</span>
+										<h4>General Chairs&rsquo; Recognition Award for Interactive Papers</h4>
+										<p>IEEE Conference on Decision and Control, Shanghai.</p>
+									</div>
+								</li>
+								<li class="award" data-cat="research">
+									<span class="award-year">2007</span>
+									<div class="award-body">
+										<span class="award-tag tag-research">Research</span>
+										<h4>Best Student Paper Award, IEEE Conference on Decision and Control</h4>
+										<p>New Orleans. With Yu Sun, for &ldquo;Fundamental performance limitations via entropy estimates with HMMs.&rdquo; <a href="https://ieeexplore.ieee.org/document/4434936/">Paper</a></p>
+									</div>
+								</li>
+								<li class="award" data-cat="honors">
+									<span class="award-year">2005</span>
+									<div class="award-body">
+										<span class="award-tag tag-honors">Honor</span>
+										<h4>Outstanding Achievement Award</h4>
+										<p>United Technologies Research Center, East Hartford, for the symmetry-breaking solution to combustion instabilities.</p>
+									</div>
+								</li>
+								<li class="award" data-cat="honors">
+									<span class="award-year">2001</span>
+									<div class="award-body">
+										<span class="award-tag tag-honors">Honor</span>
+										<h4>NSF IGERT Fellowship</h4>
+										<p>Cornell University.</p>
+									</div>
+								</li>
+								<li class="award" data-cat="teaching">
+									<span class="award-year">1994</span>
+									<div class="award-body">
+										<span class="award-tag tag-teaching">Teaching</span>
+										<h4>Outstanding Teaching Assistant Award</h4>
+										<p>Department of Electrical and Computer Engineering, University of Massachusetts Amherst.</p>
+									</div>
+								</li>
+								</ol>
+							</div>
+
+							<!-- Teaching excellence grid -->
+							<div class="col-4 col-12-medium">
+								<aside class="panel sem-panel">
+									<h3>Ranked excellent by students</h3>
+									<p>Semesters on the university&rsquo;s List of Teachers Ranked as Excellent, 2009&ndash;2020. Each column is a year: spring on top, fall below.</p>
+									<div class="sem-grid" role="img" aria-label="12 semesters ranked excellent between 2009 and 2020">
+										<div class="sem-year"><span class="sem-label">09&rsquo;</span><span class="sem on" title="Spring 2009: ranked excellent"></span><span class="sem on" title="Fall 2009: ranked excellent"></span></div><div class="sem-year"><span class="sem-label">10&rsquo;</span><span class="sem on" title="Spring 2010: ranked excellent"></span><span class="sem on" title="Fall 2010: ranked excellent"></span></div><div class="sem-year"><span class="sem-label">11&rsquo;</span><span class="sem" title="Spring 2011"></span><span class="sem" title="Fall 2011"></span></div><div class="sem-year"><span class="sem-label">12&rsquo;</span><span class="sem" title="Spring 2012"></span><span class="sem" title="Fall 2012"></span></div><div class="sem-year"><span class="sem-label">13&rsquo;</span><span class="sem on" title="Spring 2013: ranked excellent"></span><span class="sem" title="Fall 2013"></span></div><div class="sem-year"><span class="sem-label">14&rsquo;</span><span class="sem" title="Spring 2014"></span><span class="sem" title="Fall 2014"></span></div><div class="sem-year"><span class="sem-label">15&rsquo;</span><span class="sem" title="Spring 2015"></span><span class="sem on" title="Fall 2015: ranked excellent"></span></div><div class="sem-year"><span class="sem-label">16&rsquo;</span><span class="sem on" title="Spring 2016: ranked excellent"></span><span class="sem on" title="Fall 2016: ranked excellent"></span></div><div class="sem-year"><span class="sem-label">17&rsquo;</span><span class="sem on" title="Spring 2017: ranked excellent"></span><span class="sem" title="Fall 2017"></span></div><div class="sem-year"><span class="sem-label">18&rsquo;</span><span class="sem on" title="Spring 2018: ranked excellent"></span><span class="sem" title="Fall 2018"></span></div><div class="sem-year"><span class="sem-label">19&rsquo;</span><span class="sem" title="Spring 2019"></span><span class="sem on" title="Fall 2019: ranked excellent"></span></div><div class="sem-year"><span class="sem-label">20&rsquo;</span><span class="sem on" title="Spring 2020: ranked excellent"></span><span class="sem" title="Fall 2020"></span></div>
+									</div>
+									<p class="legend-note">Filled squares are semesters on the list. The record is incomplete.</p>
+								</aside>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="footer-grid">
+							<section>
+								<h3>Visit or write</h3>
+								<p>
+									Prof. Prashant G. Mehta<br />
+									Department of Mechanical Science and Engineering<br />
+									Sidney Lu Mechanical Engineering Building<br />
+									1206 W. Green Street, Urbana, IL 61801
+								</p>
+								<p><a href="mailto:mehtapg@illinois.edu">mehtapg@illinois.edu</a></p>
+							</section>
+							<section>
+								<h3>Elsewhere</h3>
+								<ul class="plain-links">
+									<li><a href="https://scholar.google.com/citations?user=wv9XU7gAAAAJ&amp;hl=en">Google Scholar</a></li>
+									<li><a href="https://csl.illinois.edu/">Coordinated Science Laboratory</a></li>
+									<li><a href="https://mechse.illinois.edu/">Illinois MechSE</a></li>
+									<li><a href="https://www.linkedin.com/in/mehtapg/">LinkedIn</a></li>
+								</ul>
+							</section>
+							<section>
+								<h3>Affiliations</h3>
+								<p>
+									The group is part of MechSE and affiliated with the Coordinated Science Laboratory,
+									Electrical and Computer Engineering, and the Neuroscience Program at Illinois.
+								</p>
+							</section>
+						</div>
+
+						<div id="copyright">
+							<ul class="menu">
+								<li>&copy; <span class="js-year">2026</span> Mehta Research Group. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/mehta.js"></script>
+			<script src="assets/js/peak-hero.js"></script>
+			<script>document.querySelectorAll('.js-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
+
+	</body>
+</html>

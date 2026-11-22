@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<!--
+	Mehta Research Group, University of Illinois Urbana-Champaign
+	Built on TXT by HTML5 UP (html5up.net | @ajlkn), CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Gallery | Mehta Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Photos from the Mehta Lab at Illinois: defenses, awards, farewells and group life." />
+		<meta property="og:title" content="Gallery | Mehta Lab" />
+		<meta property="og:description" content="Photos from the Mehta Lab at Illinois: defenses, awards, farewells and group life." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/mehta.css" />
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	</head>
+	<body class="no-sidebar gallery is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="index.html" id="logo">Mehta Lab</a></h1>
+							<p>Mechanical Science and Engineering, University of Illinois Urbana-Champaign</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav (dropdowns are handled by jquery.dropotron; on phones main.js turns this into a slide-out panel) -->
+				<nav id="nav">
+					<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="team.html">Team</a></li>
+					<li>
+						<a href="research.html">Research</a>
+						<ul>
+							<li><a href="research.html#rl-hmm">Reinforcement Learning &amp; HMMs</a></li>
+							<li><a href="research.html#filtering">Particle &amp; Nonlinear Filtering</a></li>
+							<li><a href="research.html#kalman">Kalman Filtering &amp; Stochastic Control</a></li>
+							<li><a href="research.html#soft-robotics">Past Projects</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="teaching.html">Teaching</a>
+						<ul>
+							<li><a href="teaching.html#me360">ME 360 Signal Processing</a></li>
+							<li><a href="teaching.html#tam541">TAM 541 Mathematical Methods I</a></li>
+							<li><a href="teaching.html#tam542">TAM 542 Mathematical Methods II</a></li>
+							<li><a href="teaching.html#ece515">ECE 515 Control System Theory &amp; Design</a></li>
+							<li><a href="teaching.html#ece528">ECE 528 Analysis of Nonlinear Systems</a></li>
+						</ul>
+					</li>
+					<li><a href="awards.html">Awards</a></li>
+					<li class="current"><a href="gallery.html">Gallery</a></li>
+					</ul>
+				</nav>
+
+			<!-- Hero: particles flowing between pictures by optimal transport (assets/js/transport-hero.js) -->
+				<section id="banner" class="fpf-hero is-short is-gallery" style="background-image: url('images/Gallery_Banner.webp');">
+					<canvas id="ot-canvas" aria-label="Animation: a cloud of particles flows from one picture to the next, a camera, a star, a heart and the word MEHTA." role="img"></canvas>
+					<h2 class="hero-phrase">Gallery</h2>
+					<div class="hero-caption">
+						<p>Now forming <strong id="ot-label">a camera</strong>, by optimal transport</p>
+						<div class="hero-controls">
+							<button type="button" id="ot-next">Next picture</button>
+							<button type="button" id="ot-pause" aria-pressed="false">Pause</button>
+						</div>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<header class="page-intro">
+							<p>
+								Each particle in the banner is paired with a spot in the next picture so that, together, they travel as little as possible:
+								optimal transport, the mathematics behind the feedback particle filter. Below, the rest of the lab&rsquo;s story:
+								defenses, awards, farewells, and a fair number of beers.
+							</p>
+						</header>
+
+						<div class="g-filters" role="group" aria-label="Filter photos">
+							<button type="button" data-gfilter="all" aria-pressed="true">All</button>
+							<button type="button" data-gfilter="milestones" aria-pressed="false">Milestones</button>
+							<button type="button" data-gfilter="people" aria-pressed="false">Group life</button>
+							<button type="button" data-gfilter="events" aria-pressed="false">Events</button>
+						</div>
+
+						<!-- Events, newest first. To add one, copy an <article class="g-event"> block.
+						     Put the photos in images/gallery/ and point src at them (data-remote is only needed for the old Google-hosted photos). -->
+						<div class="g-wall">
+
+								<article class="g-event" data-cat="people" data-count="2">
+									<header>
+										<time datetime="2024-06"><span class="g-mon">Jun </span><span class="g-yr">2024</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>Udit&rsquo;s farewell party</h3>
+										</div>
+									</header>
+									<div class="g-photos n2">
+										<button type="button" class="g-photo" aria-label="View larger: Udit’s farewell party, June 2024, photo 1 of 2">
+											<img src="images/gallery/2024-06-udit-farewell-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQf-78LZRBTTXsORJpOES8dczcMvInk8QszVlrIrvGAapgwfEgvGo1sfokan1MaGbsB6l8-OQR_iv-hj4wJSM6Vj1d6nZ0I9ViiK551mdC888HwO1cGZR2NjJlA6JbK30JkSKrNmVFEmPzVUa-wH6cHwnuT8_Qy1XfNwHxJVJsQOBDN9nGbmzLULBs9xEJmmU8g7i18Fb5jYj7u3Qh0dp9x0wgTS42-AdGWb1omzF0s=w1280" alt="Udit’s farewell party, June 2024, photo 1 of 2" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Udit’s farewell party, June 2024, photo 2 of 2">
+											<img src="images/gallery/2024-06-udit-farewell-2.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQf0cbpNjm5EfVgO4RksqSELeOMYWFTCNwBeSsRvcvDUWSsZInKagStEAk9Eu17ghtOIEAFNMHwciRs-9VP59lfEAvmOp5EkwjfFmHLfzBKBqsWFUEPh4iKB4cCjKVW9K_VtmqWMVtEjcZHa_K_KnhOMGvuS5pn6R_YPCVWwULjOwm5Rji9xCSz0_OKbv0oH2IIlxviMvQYa2vPjiI0jc8OsfsCRM3FQyipcE07h=w1280" alt="Udit’s farewell party, June 2024, photo 2 of 2" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="milestones" data-count="2">
+									<header>
+										<time datetime="2023-11"><span class="g-mon">Nov </span><span class="g-yr">2023</span></time>
+										<div>
+											<span class="g-tag tag-milestones">Milestone</span>
+											<h3>Jin&rsquo;s CSL Ph.D. Thesis Award</h3>
+										</div>
+									</header>
+									<div class="g-photos n2">
+										<button type="button" class="g-photo" aria-label="View larger: Jin’s CSL Ph.D. Thesis Award, November 2023, photo 1 of 2">
+											<img src="images/gallery/2023-11-jin-thesis-award-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQeZs-GteBSUndubcF5TZcKRNfp-9-GMMljhuQSMAlOwQrY3bYPYyr0gE1V2hXmQfN6mEokAb3p_ZjmuR-bBmdRHiRUZZVcROvdBhnffpOzCP7m_aU_HiE0OS6aPqp4FE1wB-WW7e2Ac_g9-7UAyecFXJ5AStpg_uYub_uKWXa_1SpzIMyWIvtgcYPVx5Jf63HI_hoCxveevnVrF-n-sRk--ZjsbZ5VASZqh-FPy-xU=w1280" alt="Jin’s CSL Ph.D. Thesis Award, November 2023, photo 1 of 2" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Jin’s CSL Ph.D. Thesis Award, November 2023, photo 2 of 2">
+											<img src="images/gallery/2023-11-jin-thesis-award-2.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcgsEc4p73i3vkvvomocTcIN-dyi7lIdtOL-Z1gCo7x3h8nE82k_CBdQmQveARVb8553i3IMmKfckIB54-UtyKfF2r-fFKemXKVXyjyutxEoqpUr_TL8Hd_hsw24pUQTvb69CaBaVD18uZofM2NEF6CqMioIaoab8ruafeTBqiG5haX-0FLqoY-i7KAHhjHQsGnfFCH6evwzTGieAHVrIY52sXsXyzyKSTxi065ouU=w1280" alt="Jin’s CSL Ph.D. Thesis Award, November 2023, photo 2 of 2" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="events" data-count="2">
+									<header>
+										<time datetime="2023-09"><span class="g-mon">Sep </span><span class="g-yr">2023</span></time>
+										<div>
+											<span class="g-tag tag-events">Event</span>
+											<h3>Engineering Research Open House</h3>
+										</div>
+									</header>
+									<div class="g-photos n2">
+										<button type="button" class="g-photo" aria-label="View larger: Engineering Research Open House, September 2023, photo 1 of 2">
+											<img src="images/gallery/2023-09-open-house-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQd3Sjb8Q1K9ubBNomDPe0yNTXn822L1QZqsZj7UKFA0EL7j69EUSa9yRNyZyAqlC-aztGUBVvUrRWqGsqfV7HZAiDhapZgp9PJZ_B05Kz5AgjVFdyoE3C_3LEh5PXa5N4B6lafMeWHTmLyG8EJ6_bQx5hK3JXuKVo-izxLCS9mnMdXCC6lcs9trukHmQxfygnvHXkpe8BlUNGTNUHuEiF9yifyw8-OaEIws3kMGeDQ=w1280" alt="Engineering Research Open House, September 2023, photo 1 of 2" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Engineering Research Open House, September 2023, photo 2 of 2">
+											<img src="images/gallery/2023-09-open-house-2.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQeoRokydU6GGe239lkHAxj4jNBHDMciXpWpR65wpVQe1ilB0q8V1_ZfXE_-Ii05jisfcYx6q7BzTKqE7V6J8n3vs_6WRUDPhFWTn1d_OfDAcLFTK2tZbbB6ns4dOd1MLlFXywHoo6OafG3uUlLLJGb97Txq7ywAaX4Z1XCHfuJN_ukZsvqI6ms9xoVLv9hIJtuuDM45yJmdd1_hhEdzf8Sfa0iuaZbbP2YynhMntoM=w1280" alt="Engineering Research Open House, September 2023, photo 2 of 2" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="milestones" data-count="2">
+									<header>
+										<time datetime="2022-06"><span class="g-mon">Jun </span><span class="g-yr">2022</span></time>
+										<div>
+											<span class="g-tag tag-milestones">Milestone</span>
+											<h3>Jin&rsquo;s doctoral defense</h3>
+										</div>
+									</header>
+									<div class="g-photos n2">
+										<button type="button" class="g-photo" aria-label="View larger: Jin’s doctoral defense, June 2022, photo 1 of 2">
+											<img src="images/gallery/2022-06-jin-defense-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQe57GV6R-h3M1KTquYeqzNgSCrkhCGvsgJNEq2Ge88VzKYxnPtT6oSD4zx1V4NG58xrdvDCrjk0Gkc5jVHHTFP4_B5SA_zIoX9BzmHzEzCxCgiEY-UeLR6OmujwqmgKy6syCuSxCXaK6G-sKV26rdsgL38IllsJ5hwR4UBSGng1tGYBDHham__BJsUz3XheKOFfcfcLhVUqwvSBJBjXF5YG4Gyv8VTNsIZ7sfBZLl4=w1280" alt="Jin’s doctoral defense, June 2022, photo 1 of 2" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Jin’s doctoral defense, June 2022, photo 2 of 2">
+											<img src="images/gallery/2022-06-jin-defense-2.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdAHKDbDIw485yY39-pT2uYTu-CKzjw-QJ3v8InTtEvoSAeUIiqCkLDzYvJHhp-yaiTiWlOLIK35lT16B-PfiJu9zfRME4So3HCvzF5IujbuYFwabPActjXW33OrfRVMuhvxEbVMvkme3h7JDW75vs-EiJ2u8G_qtWGOKR_gHt1KpoMlYHDxt9U2fPSw3J5L9FH8dgjvIKfzibaMpvp6VnUqyJNiJKPYyGffsym8Uo=w1280" alt="Jin’s doctoral defense, June 2022, photo 2 of 2" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="1">
+									<header>
+										<time datetime="2022-06"><span class="g-mon">Jun </span><span class="g-yr">2022</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>On the CSL quad</h3>
+										</div>
+									</header>
+									<div class="g-photos n1">
+										<button type="button" class="g-photo" aria-label="View larger: On the CSL quad, June 2022, photo 1 of 1">
+											<img src="images/gallery/2022-06-csl-quad-2022-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcAUGpBeROw5dE7U-t1FH8_1bSBr7mwJJuJxrg609Pj98jCNUsciF_6AHOrq0H7IbgN_GNs34RTVkWWkmSHHdNleKmO1sAbKaJN2nvP5dtdw2t_cwUBKnsrIcFThrlWFbjn2imEnXgA3O3K6xlTfa-ZqG78klL87PL8787NzFEvIPM7_cxcaxigvNtfoPoyanVXOi0yd3G179TKW7Aa_9STaFugumgXQy9AO5mS=w1280" alt="On the CSL quad, June 2022, photo 1 of 1" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="1">
+									<header>
+										<time datetime="2021-08"><span class="g-mon">Aug </span><span class="g-yr">2021</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>Kelly&rsquo;s farewell lunch</h3>
+										</div>
+									</header>
+									<div class="g-photos n1">
+										<button type="button" class="g-photo" aria-label="View larger: Kelly’s farewell lunch, August 2021, photo 1 of 1">
+											<img src="images/gallery/2021-08-kelly-farewell-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcf7BqFO6BBe2t4o-UWRSgC98QDjdIA1vinFA9G1W0Lk5Fe_6j4bd_OMDNvjG5MK_2_DgXZAXNlMFpg5jDLtI99kTaMkNQDQglxe1wr4aMtRgPSFGxuTv6vXYYbsfjmXUagQVARH5EVshfTOiswGQLvZSlZk-r_lrZ2reHKm4x0eaXvlZ-rKBJS0_wLcnoKQU8ITxsYLIZKfaonWEE-9k9ySvuZ51JusbjQS2A=w1280" alt="Kelly’s farewell lunch, August 2021, photo 1 of 1" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="1">
+									<header>
+										<time datetime="2021-08"><span class="g-mon">Aug </span><span class="g-yr">2021</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>On the CSL quad</h3>
+										</div>
+									</header>
+									<div class="g-photos n1">
+										<button type="button" class="g-photo" aria-label="View larger: On the CSL quad, August 2021, photo 1 of 1">
+											<img src="images/gallery/2021-08-csl-quad-2021-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcIfFuyH0Fyy5BTubHxDwDJyKXz9Cw-13eptujBziZ4r3AqcjvFDF-ApwkSukJPbDVSje5Vn1PIAEkWQeOlQN_cCioE3zy0p9BFC0H6mP-Rm7VnRxcNi2WwVex4UjqtbgnciwNDxPd7cd6OQqbJGS8UeqBOYeFYVZb4kkml9MFISwCSDO1o379us85fL99zLCK6QQzdtgZhhnnOzVbLWxRilXC8aM5fRY6PCv2H3gw=w1280" alt="On the CSL quad, August 2021, photo 1 of 1" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="1">
+									<header>
+										<time datetime="2021-07"><span class="g-mon">Jul </span><span class="g-yr">2021</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>Group lunch</h3>
+										</div>
+									</header>
+									<div class="g-photos n1">
+										<button type="button" class="g-photo" aria-label="View larger: Group lunch, July 2021, photo 1 of 1">
+											<img src="images/gallery/2021-07-lunch-2021-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcmP52s5sikh57obsuVFLUUywafngjFWeF4XBT8tQcdZXaR4WruzpbJOd-VgqAQdubYlZ_zQGRMVRDM1OpVDp3G8lWCtYC83NJBzUAIotFoFDkde8w1M_DDdytKxHsijJjFK2nYuzPGLqNEsiloD3zGZiszj7KFpJADzCJbn0ZsajioOg4SpYfAzPjB67Q0avMmwsaZa253Lgef5UPwAj-oCBKbrCNEO0SEstMJ7k4=w1280" alt="Group lunch, July 2021, photo 1 of 1" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="1">
+									<header>
+										<time datetime="2021-05"><span class="g-mon">May </span><span class="g-yr">2021</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>Meeting Sean Meyn over beers</h3>
+										</div>
+									</header>
+									<div class="g-photos n1">
+										<button type="button" class="g-photo" aria-label="View larger: Meeting Sean Meyn over beers, May 2021, photo 1 of 1">
+											<img src="images/gallery/2021-05-sean-meyn-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQcwYDwCzmJAGirn-UEwqpriD9McDFewbGlBk-hTyGuIp9hDHQH9ICiuUwp2JDbzmRkcRUp9F4cTsefgtR1bJRFdIVvqcV2lb-gbfhUQ-eoH9vULD9kAX3kJSIiyDjAFqARQ0nwDqAtj4_Yddx_E3tIn3PMeqLjvk-msQ06-oub1nVqdUBZS_KILhlw0nAm7-aDfT6XUbj0CYZ8-6yILiFFA0pwRAyS2oTXaaD4B_Gk=w1280" alt="Meeting Sean Meyn over beers, May 2021, photo 1 of 1" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="1">
+									<header>
+										<time datetime="2020-07"><span class="g-mon">Jul </span><span class="g-yr">2020</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>More beers</h3>
+										</div>
+									</header>
+									<div class="g-photos n1">
+										<button type="button" class="g-photo" aria-label="View larger: More beers, July 2020, photo 1 of 1">
+											<img src="images/gallery/2020-07-beers-2020b-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdbDRyETxf5d4v6UzTsHyWeJ40nvRE6pXghV9-1DRmeYIG_Z8H6dU-sq76cHurlZrNXoP965icEE8SAWfPTtP8Cd_oF276lmnPd5LLxBvWaNErwmi3SPT19_l6Z1etLIYG8_vnBIMbDTfmqYUA7gSaFrgm6ZlS5Yho1vE9XUfZ55oE-KY2whQG0NJhYAUfxH42Ebc2XH3lXmW3v1ois5obo8TDe6pF1cmj-nYKZ=w1280" alt="More beers, July 2020, photo 1 of 1" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="1">
+									<header>
+										<time datetime="2020-07"><span class="g-mon">Jul </span><span class="g-yr">2020</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>Beers during the pandemic</h3>
+										</div>
+									</header>
+									<div class="g-photos n1">
+										<button type="button" class="g-photo" aria-label="View larger: Beers during the pandemic, July 2020, photo 1 of 1">
+											<img src="images/gallery/2020-07-beers-2020a-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQd-pbS6hdwBk85PyiF6f-gaiWojuXLTrDIC5ffQuwlqCdXpm7vrlEID09sKy3shb1RQkG-CGPBds7Uj_KVP39MICNoNIc1QLWGXz3d-7po095RJjLrQcl-sUoTfERsQ2W0myihrOBW3f4KhF91ciXuT75zZ3boyia8YQlCTQiTQ6BxOnd72jueM3ELpPTT39W1kWu03Vm-Wkrt8qSWo1XUC9UFlEze-C41k3caA=w1280" alt="Beers during the pandemic, July 2020, photo 1 of 1" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="milestones" data-count="2">
+									<header>
+										<time datetime="2019-12"><span class="g-mon">Dec </span><span class="g-yr">2019</span></time>
+										<div>
+											<span class="g-tag tag-milestones">Milestone</span>
+											<h3>Jin&rsquo;s Best Student Paper Award at CDC 2019</h3>
+										</div>
+									</header>
+									<div class="g-photos n2">
+										<button type="button" class="g-photo" aria-label="View larger: Jin’s Best Student Paper Award at CDC 2019, December 2019, photo 1 of 2">
+											<img src="images/gallery/2019-12-cdc-2019-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdqoOoI8RKyHTkEPP6edqSE3Ozgvw6JKv81mO9p-kVcnZK6efeDnac99ukKfe7Q9vt3siINBNhDaVr-4CNiAm7U54GGQu1tMQjoTd2pQDnqGlXB9lA6xgi30P3gYWDy98tM9jzxHR7XulA3ZkjJfF20iJiHt6Vq3Wuyuc30dkBGqejUzkJQplTliDZk1ozVbPiJhifD9fQvNCCAm4RO4N9iTaj2shZVSQkWIFdAAI8=w1280" alt="Jin’s Best Student Paper Award at CDC 2019, December 2019, photo 1 of 2" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Jin’s Best Student Paper Award at CDC 2019, December 2019, photo 2 of 2">
+											<img src="images/gallery/2019-12-cdc-2019-2.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQeUa0R5L1xltfEQjY3nO3LMFAfYAvH4_qi-6FKfkRMZfQSZOLgBMxo1mXl7faGhknWkLhJ1vL1fqXgPF8afJA9gQBq1Kp_OyrHfiN3_6TXKoYugJFBhVe0w420HahRGHrfJ75rg1Vuyq4LpMJ5BMq5nY347kT7m755N-HulVa1ckUTev6w05lv46bxzkcEvxTuKgWnmiJXbWrN6ZC-RUjioJvg1FuEEBrbELkVP0lo=w1280" alt="Jin’s Best Student Paper Award at CDC 2019, December 2019, photo 2 of 2" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="people" data-count="2">
+									<header>
+										<time datetime="2019-08"><span class="g-mon">Aug </span><span class="g-yr">2019</span></time>
+										<div>
+											<span class="g-tag tag-people">Group life</span>
+											<h3>Amir&rsquo;s going-away party</h3>
+										</div>
+									</header>
+									<div class="g-photos n2">
+										<button type="button" class="g-photo" aria-label="View larger: Amir’s going-away party, August 2019, photo 1 of 2">
+											<img src="images/gallery/2019-08-amir-farewell-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdxHGe2udZtXbUjm8SRDFo-WV7Vs12iyq7cZbS0Yw4cCE6hS38BJf7CJDAlBrizp2IFdv8TToLQvx428t9ISbe1XqcxJyasMDXjo-PCXiBksy5csbHletJaBvi5s-GwGgzcxtKHqVeRA5jxB6QCjHgJrjpub4JBdAwB8RdOgcu3GOytmImd21fFCqWWakZMFYqFeQx0Q3wW3tFIhzP-2m2ld1hZVr7ELMOod9hv=w1280" alt="Amir’s going-away party, August 2019, photo 1 of 2" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Amir’s going-away party, August 2019, photo 2 of 2">
+											<img src="images/gallery/2019-08-amir-farewell-2.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdVK6PvSCbEtdg-yjYhuRJW8FZwLh_kdmOhI1PaU-w36SDm0yGFwrE62Ihv8RicIBBtRVaeq0DnIA7cw1cIfXkU2kBnb9RfcTYOVP79SAbXU6URnwDU_d1dsjABJRdJEIhXByn6fFopYxtnfB6xT2Qx4Zu7ycA_ZDhCsannM0GeyXS84RTJ_zIzWE2ln9XhkfxyeGs7JF9VCbq9b9tsdcquJFuD050AiCWChQ=w1280" alt="Amir’s going-away party, August 2019, photo 2 of 2" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+								<article class="g-event" data-cat="milestones" data-count="3">
+									<header>
+										<time datetime="2019-06"><span class="g-mon">Jun </span><span class="g-yr">2019</span></time>
+										<div>
+											<span class="g-tag tag-milestones">Milestone</span>
+											<h3>Amir&rsquo;s doctoral defense</h3>
+										</div>
+									</header>
+									<div class="g-photos n3">
+										<button type="button" class="g-photo" aria-label="View larger: Amir’s doctoral defense, June 2019, photo 1 of 3">
+											<img src="images/gallery/2019-06-amir-defense-1.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQfK-KXtoj--DReeixuKGwxIaUSb_y0FcK6_e-4wf7VqqA4npINgM5pLIYfk9OKBJwf0Fm7f8n6v6PX0xrUIbE6bRhbYZwnxzlNouyPZs_N0tUio0C3arnwv-1nwY8mtJBsyX4_XIGRNkURUmbIvlcoXGNYIJVrNMSvOwVCp3NVETIoh2wMQla2duMIVxHY8DtWxuqJo6CevMZ-WpMFe0Sj54zgrUjNcEo90ese6Jes=w1280" alt="Amir’s doctoral defense, June 2019, photo 1 of 3" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Amir’s doctoral defense, June 2019, photo 2 of 3">
+											<img src="images/gallery/2019-06-amir-defense-2.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdiQSVHYPpUU6u3GV-hBH3pqtDDUxY-u_grUMFubQ-76yMrmi4obG2Mo-hNTLlIMV2nnFoDN9WNNojvpWCKYklmkElizwacI_VQBVgu_Gu4JHYXmxEx7RPaeiT_GxE7dq_hy0g4qhctsfecfNLL6WVAXergFfFNtkVa4iDElIrK_qzZ1hHmyVJ2lytZKY2JRvRnfNDin5GiYEPZglg7tfuwdnCxrfrChkwVB6_W9Cc=w1280" alt="Amir’s doctoral defense, June 2019, photo 2 of 3" loading="lazy" decoding="async" />
+										</button>
+										<button type="button" class="g-photo" aria-label="View larger: Amir’s doctoral defense, June 2019, photo 3 of 3">
+											<img src="images/gallery/2019-06-amir-defense-3.jpg" data-remote="https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdJb35BhDJ9M4tN77boSnYJulLuWPfdOy5DtnwDgW1s1qkdx8jWpIBO-i52kZmqgfHsNCe4TQrw9RBlNlyaLv2RK48RcZrpFRtYokH03Rr-5laT_kZUr9Ic_WK-JvjQIfNjP8rLhBzCsnXk7QGyc1QFeL84pIA9unucyPZffkKxeg3Vl_5UR_45Xq4NQUZIod0QmactOgboT4-E14-bkmdpjPVEHayloXHj3ZS60fs=w1280" alt="Amir’s doctoral defense, June 2019, photo 3 of 3" loading="lazy" decoding="async" />
+										</button>
+									</div>
+								</article>
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="footer-grid">
+							<section>
+								<h3>Visit or write</h3>
+								<p>
+									Prof. Prashant G. Mehta<br />
+									Department of Mechanical Science and Engineering<br />
+									Sidney Lu Mechanical Engineering Building<br />
+									1206 W. Green Street, Urbana, IL 61801
+								</p>
+								<p><a href="mailto:mehtapg@illinois.edu">mehtapg@illinois.edu</a></p>
+							</section>
+							<section>
+								<h3>Elsewhere</h3>
+								<ul class="plain-links">
+									<li><a href="https://scholar.google.com/citations?user=wv9XU7gAAAAJ&amp;hl=en">Google Scholar</a></li>
+									<li><a href="https://csl.illinois.edu/">Coordinated Science Laboratory</a></li>
+									<li><a href="https://mechse.illinois.edu/">Illinois MechSE</a></li>
+									<li><a href="https://www.linkedin.com/in/mehtapg/">LinkedIn</a></li>
+								</ul>
+							</section>
+							<section>
+								<h3>Affiliations</h3>
+								<p>
+									The group is part of MechSE and affiliated with the Coordinated Science Laboratory,
+									Electrical and Computer Engineering, and the Neuroscience Program at Illinois.
+								</p>
+							</section>
+						</div>
+
+						<div id="copyright">
+							<ul class="menu">
+								<li>&copy; <span class="js-year">2026</span> Mehta Research Group. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/mehta.js"></script>
+			<script src="assets/js/transport-hero.js"></script>
+			<script src="assets/js/gallery.js"></script>
+			<script>document.querySelectorAll('.js-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
+
+	</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<!--
+	Mehta Research Group, University of Illinois Urbana-Champaign
+	Built on TXT by HTML5 UP (html5up.net | @ajlkn), CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Research | Mehta Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Research in the Mehta Lab: reinforcement learning and hidden Markov models, particle and nonlinear filtering, Kalman filtering and stochastic optimal control." />
+		<meta property="og:title" content="Research | Mehta Lab" />
+		<meta property="og:description" content="Research in the Mehta Lab: reinforcement learning and hidden Markov models, particle and nonlinear filtering, Kalman filtering and stochastic optimal control." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/mehta.css" />
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+		<script>
+			window.MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }, svg: { fontCache: 'global' } };
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js" async></script>
+	</head>
+	<body class="no-sidebar research is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="index.html" id="logo">Mehta Lab</a></h1>
+							<p>Mechanical Science and Engineering, University of Illinois Urbana-Champaign</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav (dropdowns are handled by jquery.dropotron; on phones main.js turns this into a slide-out panel) -->
+				<nav id="nav">
+					<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="team.html">Team</a></li>
+					<li class="current">
+						<a href="research.html">Research</a>
+						<ul>
+							<li><a href="research.html#rl-hmm">Reinforcement Learning &amp; HMMs</a></li>
+							<li><a href="research.html#filtering">Particle &amp; Nonlinear Filtering</a></li>
+							<li><a href="research.html#kalman">Kalman Filtering &amp; Stochastic Control</a></li>
+							<li><a href="research.html#soft-robotics">Past Projects</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="teaching.html">Teaching</a>
+						<ul>
+							<li><a href="teaching.html#me360">ME 360 Signal Processing</a></li>
+							<li><a href="teaching.html#tam541">TAM 541 Mathematical Methods I</a></li>
+							<li><a href="teaching.html#tam542">TAM 542 Mathematical Methods II</a></li>
+							<li><a href="teaching.html#ece515">ECE 515 Control System Theory &amp; Design</a></li>
+							<li><a href="teaching.html#ece528">ECE 528 Analysis of Nonlinear Systems</a></li>
+						</ul>
+					</li>
+					<li><a href="awards.html">Awards</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					</ul>
+				</nav>
+
+			<!-- Hero: a hidden Markov model filtered live (assets/js/hmm-hero.js) -->
+				<section id="banner" class="fpf-hero is-short is-research" style="background-image: url('images/Research_Park.jpg');">
+					<canvas id="hmm-canvas" aria-label="Animation: a hidden state hops between five coloured nodes and emits a stream of coloured tokens; each node glows with the filter's belief that it is the hidden state. Click to make the hidden state jump." role="img"></canvas>
+					<h2 class="hero-phrase">Research</h2>
+					<div class="hero-caption">
+						<p><span class="key truth"></span>hidden state &nbsp;glow = filter&rsquo;s belief</p>
+						<label class="hero-slider" for="hmm-clarity">Token clarity <input type="range" id="hmm-clarity" min="0.3" max="0.95" step="0.05" /> <output id="hmm-clarity-value">70%</output></label>
+						<div class="hero-controls">
+							<button type="button" id="hmm-jump">Jump</button>
+							<button type="button" id="hmm-pause" aria-pressed="false">Pause</button>
+						</div>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<header class="page-intro">
+							<p>
+								Most of what we do comes back to one question: how should a system act when it can only partly see what is going on?
+								The banner is a small example. A hidden state hops between five nodes and all we see are noisy tokens; the glow on each node
+								is the filter&rsquo;s belief, updated with every token. Lower the token clarity and watch the belief spread out.
+							</p>
+						</header>
+
+						<!-- Project tabs. Each tab opens the panel with the matching id; links like research.html#kalman open it directly. -->
+						<div class="research-tabs">
+							<div class="rtabs-wrap">
+								<p class="rtabs-label">Current projects</p>
+								<div class="rtabs rtabs-current" role="tablist" aria-label="Current projects">
+									<a href="#rl-hmm" id="tab-rl-hmm" role="tab" aria-controls="rl-hmm" aria-selected="false" tabindex="-1"><span class="rtab-label">Reinforcement Learning &amp; HMMs</span><span class="rtab-sub">Transformers from first principles</span></a>
+									<a href="#filtering" id="tab-filtering" role="tab" aria-controls="filtering" aria-selected="false" tabindex="-1"><span class="rtab-label">Particle &amp; Nonlinear Filtering</span><span class="rtab-sub">The feedback particle filter</span></a>
+									<a href="#kalman" id="tab-kalman" role="tab" aria-controls="kalman" aria-selected="false" tabindex="-1"><span class="rtab-label">Kalman Filtering &amp; Stochastic Control</span><span class="rtab-sub">Duality, and the arrow of time</span></a>
+								</div>
+							</div>
+							<div class="rtabs-wrap">
+								<p class="rtabs-label">Past projects</p>
+								<div class="rtabs rtabs-past" role="tablist" aria-label="Past projects">
+									<a href="#soft-robotics" id="tab-soft-robotics" role="tab" aria-controls="soft-robotics" aria-selected="false" tabindex="-1"><span class="rtab-label">Soft Robotics</span></a>
+									<a href="#epidemiology" id="tab-epidemiology" role="tab" aria-controls="epidemiology" aria-selected="false" tabindex="-1"><span class="rtab-label">Epidemiology</span></a>
+									<a href="#sensorimotor" id="tab-sensorimotor" role="tab" aria-controls="sensorimotor" aria-selected="false" tabindex="-1"><span class="rtab-label">Sensorimotor Control</span></a>
+									<a href="#rhythms" id="tab-rhythms" role="tab" aria-controls="rhythms" aria-selected="false" tabindex="-1"><span class="rtab-label">Neural Rhythms</span></a>
+									<a href="#mfg" id="tab-mfg" role="tab" aria-controls="mfg" aria-selected="false" tabindex="-1"><span class="rtab-label">Mean Field Games</span></a>
+								</div>
+							</div>
+
+							<div class="rpanels">
+
+							<!-- Reinforcement Learning &amp; Hidden Markov Models -->
+							<section class="rpanel" id="rl-hmm" role="tabpanel" aria-labelledby="tab-rl-hmm" hidden>
+								<header class="rpanel-head">
+									<h3>Reinforcement Learning &amp; Hidden Markov Models</h3>
+									<p class="question">What would a transformer look like if you derived it from first principles?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											A language model predicts the next token from the ones before it. We model that setting with a hidden Markov model,
+											where the observed tokens are generated by a hidden process, and treat next-token prediction as a filtering problem.
+											Recasting the prediction as an optimal control problem yields the <strong>dual filter</strong>, an inference algorithm whose
+											layer structure closely parallels a decoder-only transformer. Related work learns HMMs from data with filter-based networks.
+										</p>
+										<p>
+											On the learning side, we design systems of interacting particles that represent and learn optimal control laws for
+											reinforcement learning. The interactions between particles greatly speed up convergence; a complete theory is developed
+											for the linear quadratic case.
+										</p>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">Heng-Sheng Chang</a></li><li><a href="team.html">Aditya Kudre</a></li><li><a href="team.html">Malik Nauman Rauf</a></li><li><a href="team.html">Anant Joshi</a></li><li><a href="team.html">Prashant G. Mehta</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<figure class="fig">
+											<svg viewBox="0 0 240 150" role="img" aria-labelledby="fig-rl-t"><title id="fig-rl-t">A chain of hidden states, each emitting an observed token</title>
+												<g fill="none" stroke="#13294B" stroke-width="2">
+													<circle cx="35" cy="45" r="16"/><circle cx="95" cy="45" r="16"/><circle cx="155" cy="45" r="16"/><circle cx="215" cy="45" r="16" stroke-dasharray="4 3"/>
+													<path d="M51 45 H79 M111 45 H139 M171 45 H199"/><path d="M35 61 V95 M95 61 V95 M155 61 V95"/>
+												</g>
+												<g fill="#FF5F05"><rect x="25" y="98" width="20" height="20" rx="3"/><rect x="85" y="98" width="20" height="20" rx="3"/><rect x="145" y="98" width="20" height="20" rx="3"/></g>
+												<rect x="205" y="98" width="20" height="20" rx="3" fill="none" stroke="#FF5F05" stroke-width="2" stroke-dasharray="4 3"/>
+												<g font-family="Source Sans 3, sans-serif" font-size="11" fill="#45546B" text-anchor="middle"><text x="35" y="49">X&#8321;</text><text x="95" y="49">X&#8322;</text><text x="155" y="49">X&#8323;</text><text x="215" y="49">?</text></g>
+											</svg>
+											<figcaption>Next-token prediction as filtering: infer the hidden state from past tokens, then predict the next one. The banner above runs this live.</figcaption>
+										</figure>
+										<p class="media-note">Video demonstrations for this project will be added here. <!-- Paste a YouTube embed like the one in Soft robotics. --></p>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://arxiv.org/abs/2505.00818">Dual filter: A transformer-like inference architecture for hidden Markov models</a>
+											<span class="pub-meta">H.-S. Chang, P. G. Mehta. <em>arXiv:2505.00818, 2025</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2605.15608">Transformer-like inference from optimal control</a>
+											<span class="pub-meta">A. Kudre, H.-S. Chang, P. G. Mehta. <em>arXiv:2605.15608, 2026</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2508.20211">What can we learn from signals and systems in a transformer? Insights for probabilistic modeling and inference architecture</a>
+											<span class="pub-meta">H.-S. Chang, P. G. Mehta. <em>arXiv:2508.20211, 2025</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2511.10571">Belief Net: A filter-based framework for learning hidden Markov models from observations</a>
+											<span class="pub-meta">R. Z. Chen, H.-S. Chang, P. G. Mehta. <em>arXiv:2511.10571, 2025</em></span>
+										</li>
+										<li>
+											<a href="https://proceedings.mlr.press/v283/joshi25a.html">Interacting particle systems for fast linear quadratic RL</a>
+											<span class="pub-meta">A. A. Joshi, H.-S. Chang, A. Taghvaei, P. G. Mehta, S. P. Meyn. <em>Learning for Dynamics &amp; Control (L4DC), PMLR 283, 2025</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2107.01244">Controlled interacting particle algorithms for simulation-based reinforcement learning</a>
+											<span class="pub-meta">A. A. Joshi, A. Taghvaei, P. G. Mehta, S. P. Meyn. <em>Systems &amp; Control Letters 170, 2022</em></span>
+										</li>
+								</ol>
+							</section>
+							<!-- Particle &amp; Nonlinear Filtering -->
+							<section class="rpanel" id="filtering" role="tabpanel" aria-labelledby="tab-filtering" hidden>
+								<header class="rpanel-head">
+									<h3>Particle &amp; Nonlinear Filtering</h3>
+									<p class="question">How do you estimate what you cannot see, when nothing is linear or Gaussian?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											Nonlinear filtering computes the conditional probability of a hidden state given noisy observations. Our best-known contribution
+											is the <strong>feedback particle filter</strong> (FPF), which generalizes the Kalman filter to nonlinear, non-Gaussian problems.
+											Instead of the importance weights and resampling of a conventional particle filter, each particle is moved by a feedback
+											control law with the same structure as the Kalman filter&rsquo;s update. The FPF belongs to a broader class of
+											controlled interacting particle systems, related to the ensemble Kalman filter and to optimal transportation theory.
+										</p>
+										<p>
+											A parallel line of work develops the theory: a duality that expresses stochastic observability of a hidden Markov model as
+											controllability of a dual control system, and uses it to study when a filter forgets a wrong initial guess (filter stability).
+										</p>
+										<div class="equation">
+											\[ dX^i_t = a(X^i_t)\,dt + \sigma(X^i_t)\,dB^i_t + \mathsf{K}(X^i_t,t)\circ\Big( dZ_t - \tfrac{1}{2}\big(h(X^i_t) + \hat h_t\big)\,dt \Big) \]
+											<p class="where">The feedback particle filter: particle \(i\) follows the model plus a correction driven by the observation \(Z_t\). The gain \(\mathsf{K}\) solves a Poisson equation.</p>
+										</div>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">Prashant G. Mehta</a></li><li><a href="team.html">Jiangjun (Alex) Yu/a></li><li><a href="team.html">Jin Won Kim (alumnus)</a></li><li><a href="team.html">Amirhossein Taghvaei (alumnus)</a></li><li><a href="team.html">Tao Yang (alumnus)</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<figure class="fig">
+											<svg viewBox="0 0 240 150" role="img" aria-labelledby="fig-fpf-t"><title id="fig-fpf-t">Particles pushed toward the measurement by a feedback gain</title>
+												<line x1="20" y1="130" x2="225" y2="130" stroke="#D6DDE7"/>
+												<line x1="150" y1="18" x2="150" y2="128" stroke="#FF5F05" stroke-width="2" stroke-dasharray="4 4"/>
+												<text x="156" y="28" font-family="Source Sans 3, sans-serif" font-size="11" fill="#B8420A">measurement</text>
+												<g stroke="#13294B" stroke-width="1.5" fill="none"><path d="M48 52 L82 56"/><path d="M60 90 L92 88"/><path d="M40 112 L76 106"/><path d="M90 40 L114 46"/><path d="M98 116 L122 108"/><path d="M210 70 L190 72"/><path d="M196 104 L180 100"/></g>
+												<g fill="#5B87C5"><circle cx="45" cy="52" r="4"/><circle cx="57" cy="90" r="4"/><circle cx="37" cy="112" r="4"/><circle cx="87" cy="40" r="4"/><circle cx="95" cy="116" r="4"/><circle cx="213" cy="70" r="4"/><circle cx="199" cy="104" r="4"/><circle cx="140" cy="62" r="4"/><circle cx="156" cy="84" r="4"/><circle cx="146" cy="100" r="4"/></g>
+											</svg>
+											<figcaption>In the feedback particle filter each particle is steered by a gain proportional to its own prediction error, rather than reweighted and resampled. The home page banner runs one live.</figcaption>
+										</figure>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://arxiv.org/abs/2301.00935">A survey of feedback particle filter and related controlled interacting particle systems (CIPS)</a>
+											<span class="pub-meta">A. Taghvaei, P. G. Mehta. <em>Annual Reviews in Control 55, 2023</em></span>
+										</li>
+										<li>
+											<a href="https://doi.org/10.1109/TAC.2013.2258825">Feedback particle filter</a>
+											<span class="pub-meta">T. Yang, P. G. Mehta, S. P. Meyn. <em>IEEE Transactions on Automatic Control 58(10), 2013</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2208.06586">Duality for nonlinear filtering I: Observability</a>
+											<span class="pub-meta">J. W. Kim, P. G. Mehta. <em>IEEE Transactions on Automatic Control (arXiv:2208.06586)</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2103.14634">A dual characterization of the stability of the Wonham filter</a>
+											<span class="pub-meta">J. W. Kim, P. G. Mehta. <em>IEEE Conference on Decision and Control, 2021</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2207.07709">Duality for nonlinear filtering</a>
+											<span class="pub-meta">J. W. Kim. <em>Ph.D. thesis, University of Illinois, 2022</em></span>
+										</li>
+								</ol>
+							</section>
+							<!-- Kalman Filtering &amp; Stochastic Optimal Control -->
+							<section class="rpanel" id="kalman" role="tabpanel" aria-labelledby="tab-kalman" hidden>
+								<header class="rpanel-head">
+									<h3>Kalman Filtering &amp; Stochastic Optimal Control</h3>
+									<p class="question">Why is the Riccati equation the fundamental equation of both estimation and control?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											Kalman showed that, for linear systems, estimation and control are duals of each other: the covariance update of the Kalman
+											filter, run with time reversed, is the Riccati equation of linear quadratic control. Extending that duality beyond the linear
+											Gaussian model had been an open problem for decades. We presented a dual optimal control problem for nonlinear filtering,
+											an exact extension of Kalman&rsquo;s minimum variance duality.
+										</p>
+										<p>
+											The duality also runs the other way. The ensemble Kalman filter, built for estimation, can be turned into a
+											<strong>dual ensemble Kalman filter</strong> that solves stochastic optimal control problems by simulation, linking this
+											project to our work on reinforcement learning.
+										</p>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">Prashant G. Mehta</a></li><li><a href="team.html">Anant Joshi</a></li><li><a href="team.html">Jin Won Kim (alumnus)</a></li><li><a href="team.html">Amirhossein Taghvaei (alumnus)</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<figure class="fig">
+											<svg viewBox="0 0 240 150" role="img" aria-labelledby="fig-dual-t"><title id="fig-dual-t">Filtering runs forward in time; its dual optimal control problem runs backward</title>
+												<g font-family="Source Sans 3, sans-serif" font-size="12">
+													<text x="20" y="34" fill="#13294B" font-weight="700">Filtering</text>
+													<line x1="20" y1="48" x2="215" y2="48" stroke="#13294B" stroke-width="2"/><path d="M215 42 L226 48 L215 54 Z" fill="#13294B"/>
+													<text x="20" y="66" fill="#6E7C90" font-size="11">observations in, estimate out</text>
+													<text x="20" y="104" fill="#B8420A" font-weight="700">Optimal control</text>
+													<line x1="25" y1="118" x2="222" y2="118" stroke="#FF5F05" stroke-width="2"/><path d="M25 112 L14 118 L25 124 Z" fill="#FF5F05"/>
+													<text x="20" y="138" fill="#6E7C90" font-size="11">solved backward in time</text>
+												</g>
+											</svg>
+											<figcaption>The arrow of time: the Kalman filter runs forward, and its dual, a linear quadratic control problem, runs backward. Both are governed by the same Riccati equation.</figcaption>
+										</figure>
+										<p class="media-note">Video demonstrations for this project will be added here. <!-- Paste a YouTube embed like the one in Soft robotics. --></p>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://arxiv.org/abs/2405.07650">Arrow of time in estimation and control: Duality theory beyond the linear Gaussian model</a>
+											<span class="pub-meta">J. W. Kim, P. G. Mehta. <em>arXiv:2405.07650, 2024</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2404.06696">Dual ensemble Kalman filter for stochastic optimal control</a>
+											<span class="pub-meta">A. A. Joshi, A. Taghvaei, P. G. Mehta, S. P. Meyn. <em>arXiv:2404.06696, 2024</em></span>
+										</li>
+										<li>
+											<a href="https://ieeexplore.ieee.org/document/9030206">What is the Lagrangian for nonlinear filtering?</a>
+											<span class="pub-meta">J. W. Kim, P. G. Mehta, S. P. Meyn. <em>IEEE Conference on Decision and Control, 2019 (Best Student Paper Award)</em></span>
+										</li>
+								</ol>
+							</section>
+							<!-- Soft Robotics -->
+							<section class="rpanel" id="soft-robotics" role="tabpanel" aria-labelledby="tab-soft-robotics" hidden>
+								<header class="rpanel-head">
+									<h3>Soft Robotics</h3>
+									<p class="question">How do you control an arm with no joints and almost infinite degrees of freedom?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											An octopus arm is hyper-flexible, yet coordinates a rich repertoire of motions. We modeled a soft arm as a Cosserat rod
+											with biomechanically realistic muscles, and used <strong>energy shaping control</strong> to make it reach, grasp and crawl, both in
+											simulation (CyberOctopus) and on the BR2 soft robot. A stored energy function for the muscles avoids the hardest step of
+											energy shaping, solving the matching conditions. A sensory feedback control law reproduced the bend propagation seen in real octopus arms.
+										</p>
+										<p>The work was part of a multi-university MURI project with collaborators across Illinois.</p>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">Heng-Sheng Chang</a></li><li><a href="team.html">Tixian Wang (alumnus)</a></li><li><a href="team.html">Udit Halder (alumnus)</a></li><li><a href="team.html">Prashant G. Mehta</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<div class="video-frame">
+											<iframe data-src="https://www.youtube-nocookie.com/embed/OiFC_3n9qNI" title="Soft robotics research video" loading="lazy"
+												allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://arxiv.org/abs/2209.04089">Energy-shaping control of a muscular octopus arm moving in three dimensions</a>
+											<span class="pub-meta">H.-S. Chang, U. Halder, C.-H. Shih, N. Naughton, M. Gazzola, P. G. Mehta. <em>Proceedings of the Royal Society A 479(2270), 2023</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2204.00717">A sensory feedback control law for octopus arm movements</a>
+											<span class="pub-meta">T. Wang, U. Halder, E. Gribkova, R. Gillette, M. Gazzola, P. G. Mehta. <em>IEEE Conference on Decision and Control, 2022</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2010.03368">Controlling a CyberOctopus soft arm with muscle-like actuation</a>
+											<span class="pub-meta">H.-S. Chang, U. Halder, N. Naughton, P. G. Mehta, et al. <em>arXiv:2010.03368, 2020</em></span>
+										</li>
+										<li>
+											<a href="https://arxiv.org/abs/2004.05747">Energy shaping control of a CyberOctopus soft arm</a>
+											<span class="pub-meta">H.-S. Chang, U. Halder, C.-H. Shih, et al. <em>IEEE Conference on Decision and Control, 2020</em></span>
+										</li>
+								</ol>
+							</section>
+							<!-- Epidemiological Modeling -->
+							<section class="rpanel" id="epidemiology" role="tabpanel" aria-labelledby="tab-epidemiology" hidden>
+								<header class="rpanel-head">
+									<h3>Epidemiological Modeling</h3>
+									<p class="question">What can control theory say about the spread of a disease?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											When COVID-19 spread around the world, the group joined the effort with collaborators at the Coordinated Science Laboratory,
+											including Tamer Ba&#351;ar and Carolyn Beck, working on modeling, analysis and control of disease spread with support from the
+											C3.ai Digital Transformation Institute. Stochastic models based on jump processes were developed for both epidemiology and neuroscience.
+										</p>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">S. Yagiz Olmez (alumnus)</a></li><li><a href="team.html">Prashant G. Mehta</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<p class="media-note">Video demonstrations for this project will be added here. <!-- Paste a YouTube embed like the one in Soft robotics. --></p>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://www.ideals.illinois.edu/items/139731">Applications of jump processes in epidemiology and neuroscience</a>
+											<span class="pub-meta">S. Y. Olmez. <em>Ph.D. thesis, University of Illinois, 2025</em></span>
+										</li>
+								</ol>
+							</section>
+							<!-- Sensorimotor Control -->
+							<section class="rpanel" id="sensorimotor" role="tabpanel" aria-labelledby="tab-sensorimotor" hidden>
+								<header class="rpanel-head">
+									<h3>Sensorimotor Control</h3>
+									<p class="question">How do sensing and movement work together in a body without a skeleton?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											Neural models and algorithms for sensorimotor control of an octopus arm: how sensory signals along the arm can be turned into
+											coordinated muscle activity, drawing on observations by biologists. This work grew into the soft robotics project.
+										</p>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">Tixian Wang (alumnus)</a></li><li><a href="team.html">Prashant G. Mehta</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<p class="media-note">Video demonstrations for this project will be added here. <!-- Paste a YouTube embed like the one in Soft robotics. --></p>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://www.ideals.illinois.edu/items/137052">Modeling and algorithms for sensorimotor control of a soft continuum arm</a>
+											<span class="pub-meta">T. Wang. <em>Ph.D. thesis, University of Illinois, 2025</em></span>
+										</li>
+								</ol>
+							</section>
+							<!-- Neural Rhythms -->
+							<section class="rpanel" id="rhythms" role="tabpanel" aria-labelledby="tab-rhythms" hidden>
+								<header class="rpanel-head">
+									<h3>Neural Rhythms</h3>
+									<p class="question">What do coupled oscillators tell us about rhythms in the brain?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											Populations of neurons fire in rhythms. We used models of coupled oscillators to study how such rhythms arise,
+											synchronize and interact, including coupling across frequencies. The same mathematics drives the Kuramoto animation on the Team page.
+										</p>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">Jiangjun (Alex) Yu</a></li><li><a href="team.html">Huibing Yin (alumnus)</a></li><li><a href="team.html">Prashant G. Mehta</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<p class="media-note">Video demonstrations for this project will be added here. <!-- Paste a YouTube embed like the one in Soft robotics. --></p>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://ieeexplore.ieee.org/document/5531465/">Synchronization of coupled oscillators is a game</a>
+											<span class="pub-meta">H. Yin, P. G. Mehta, S. P. Meyn, U. V. Shanbhag. <em>American Control Conference, 2010 (Best Student Paper finalist)</em></span>
+										</li>
+								</ol>
+							</section>
+							<!-- Mean Field Games -->
+							<section class="rpanel" id="mfg" role="tabpanel" aria-labelledby="tab-mfg" hidden>
+								<header class="rpanel-head">
+									<h3>Mean Field Games</h3>
+									<p class="question">What happens when very many players each optimize for themselves?</p>
+								</header>
+								<div class="rpanel-grid">
+									<div class="rpanel-text">
+										<p>
+											Games with very large numbers of interacting players, analyzed through their mean-field limit. A key result was that synchronization
+											of coupled oscillators can be understood as a game, with a phase transition between incoherence and synchrony. Mean-field ideas
+											continue in the group&rsquo;s interacting particle algorithms for filtering and control.
+										</p>
+										<h4>People</h4>
+										<ul class="people-chips"><li><a href="team.html">Jiangjun (Alex) Yu</a></li><li><a href="team.html">Huibing Yin (alumnus)</a></li><li><a href="team.html">Prashant G. Mehta</a></li></ul>
+									</div>
+									<div class="rpanel-media">
+										<p class="media-note">Video demonstrations for this project will be added here. <!-- Paste a YouTube embed like the one in Soft robotics. --></p>
+									</div>
+								</div>
+								<h4 class="pubs-title">Selected publications</h4>
+								<ol class="pubs">
+										<li>
+											<a href="https://ieeexplore.ieee.org/document/5531465/">Synchronization of coupled oscillators is a game</a>
+											<span class="pub-meta">H. Yin, P. G. Mehta, S. P. Meyn, U. V. Shanbhag. <em>American Control Conference, 2010</em></span>
+										</li>
+										<li>
+											<a href="https://www.ideals.illinois.edu/handle/2142/30922">Noncooperative static and dynamic games: Addressing shared constraints and phase transitions</a>
+											<span class="pub-meta">H. Yin. <em>Ph.D. thesis, University of Illinois, 2012</em></span>
+										</li>
+								</ol>
+							</section>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="footer-grid">
+							<section>
+								<h3>Contact</h3>
+								<p>
+									Prof. Prashant G. Mehta<br />
+									Coordinated Science Laboratory<br />
+									1308 W. Main St.,Urbana, IL 61801 - USA 
+								</p>
+								<p><a href="mailto:mehtapg@illinois.edu">mehtapg@illinois.edu</a></p>
+							</section>
+							<section>
+								<h3>Elsewhere</h3>
+								<ul class="plain-links">
+									<li><a href="https://scholar.google.com/citations?user=wv9XU7gAAAAJ&amp;hl=en">Google Scholar</a></li>
+									<li><a href="https://csl.illinois.edu/">Coordinated Science Laboratory</a></li>
+									<li><a href="https://mechse.illinois.edu/">Illinois MechSE</a></li>
+									<li><a href="https://www.linkedin.com/in/mehtapg/">LinkedIn</a></li>
+								</ul>
+							</section>
+							<section>
+								<h3>Affiliations</h3>
+								<p>
+									The group is part of MechSE and affiliated with the Coordinated Science Laboratory,
+									Electrical and Computer Engineering, and the Neuroscience Program at Illinois.
+								</p>
+							</section>
+						</div>
+
+						<div id="copyright">
+							<ul class="menu">
+								<li>&copy; <span class="js-year">2026</span> Mehta Research Group. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/mehta.js"></script>
+			<script src="assets/js/hmm-hero.js"></script>
+			<script src="assets/js/research-tabs.js"></script>
+			<script>document.querySelectorAll('.js-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
+
+	</body>
+</html>

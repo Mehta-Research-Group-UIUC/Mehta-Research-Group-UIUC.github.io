@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<!--
+	Mehta Research Group, University of Illinois Urbana-Champaign
+	Built on TXT by HTML5 UP (html5up.net | @ajlkn), CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Teaching | Mehta Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Courses taught by Prof. Prashant G. Mehta at Illinois: signal processing, mathematical methods, control system theory and nonlinear systems." />
+		<meta property="og:title" content="Teaching | Mehta Lab" />
+		<meta property="og:description" content="Courses taught by Prof. Prashant G. Mehta at Illinois: signal processing, mathematical methods, control system theory and nonlinear systems." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/mehta.css" />
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	</head>
+	<body class="no-sidebar teaching is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="index.html" id="logo">Mehta Lab</a></h1>
+							<p>Mechanical Science and Engineering, University of Illinois Urbana-Champaign</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav (dropdowns are handled by jquery.dropotron; on phones main.js turns this into a slide-out panel) -->
+				<nav id="nav">
+					<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="team.html">Team</a></li>
+					<li>
+						<a href="research.html">Research</a>
+						<ul>
+							<li><a href="research.html#rl-hmm">Reinforcement Learning &amp; HMMs</a></li>
+							<li><a href="research.html#filtering">Particle &amp; Nonlinear Filtering</a></li>
+							<li><a href="research.html#kalman">Kalman Filtering &amp; Stochastic Control</a></li>
+							<li><a href="research.html#soft-robotics">Past Projects</a></li>
+						</ul>
+					</li>
+					<li class="current">
+						<a href="teaching.html">Teaching</a>
+						<ul>
+							<li><a href="teaching.html#me360">ME 360 Signal Processing</a></li>
+							<li><a href="teaching.html#tam541">TAM 541 Mathematical Methods I</a></li>
+							<li><a href="teaching.html#tam542">TAM 542 Mathematical Methods II</a></li>
+							<li><a href="teaching.html#ece515">ECE 515 Control System Theory &amp; Design</a></li>
+							<li><a href="teaching.html#ece528">ECE 528 Analysis of Nonlinear Systems</a></li>
+						</ul>
+					</li>
+					<li><a href="awards.html">Awards</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					</ul>
+				</nav>
+
+			<!-- Hero: a Fourier series built term by term (assets/js/fourier-hero.js) -->
+				<section id="banner" class="fpf-hero is-short is-teaching" style="background-image: url('images/teaching_banner.jpeg');">
+					<canvas id="fourier-canvas" aria-label="Animation: spinning circles stacked tip to tail trace out a square wave. Add more circles with the slider to make the approximation sharper." role="img"></canvas>
+					<h2 class="hero-phrase">Teaching</h2>
+					<div class="hero-caption">
+						<div class="hero-shapes" role="group" aria-label="Waveform">
+							<button type="button" data-shape="square" aria-pressed="true">Square</button>
+							<button type="button" data-shape="sawtooth" aria-pressed="false">Sawtooth</button>
+							<button type="button" data-shape="triangle" aria-pressed="false">Triangle</button>
+						</div>
+						<label class="hero-slider" for="fourier-terms">Terms <input type="range" id="fourier-terms" min="1" max="30" step="1" /> <output id="fourier-terms-value">5</output></label>
+						<div class="hero-controls">
+							<button type="button" id="fourier-pause" aria-pressed="false">Pause</button>
+						</div>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<header class="page-intro">
+							<p>
+								Every wave, however jagged, is a sum of smooth ones. The banner builds one from spinning circles, a term at a time:
+								the Fourier series, and the first big idea in ME 360. Prof. Mehta teaches signal processing to undergraduates and the
+								mathematics and control sequence to graduate students, and in 2025 received the MechSE Alumni Five-Year Effective Teaching Award.
+							</p>
+						</header>
+
+						<!-- Course wall: swipe, use the arrows, or pick a course. Each <article class="course"> is one wall. -->
+						<section class="course-wall" aria-label="Courses">
+							<nav class="course-tabs" aria-label="Choose a course">
+								<a href="#me360">ME 360</a>
+								<a href="#tam541">TAM 541</a>
+								<a href="#tam542">TAM 542</a>
+								<a href="#ece515">ECE 515</a>
+								<a href="#ece528">ECE 528</a>
+							</nav>
+
+							<div class="course-viewport">
+								<button type="button" class="course-arrow course-prev" aria-label="Previous course">&larr;</button>
+								<div class="course-track" tabindex="0" aria-label="Courses, use left and right arrow keys">
+
+							<!-- ME 360 -->
+							<article class="course" id="me360" aria-label="ME 360 Signal Processing" role="group" aria-roledescription="course">
+								<div class="course-main">
+									<div class="course-head">
+										<div>
+											<p class="course-level">Undergraduate &middot; required for Mechanical Engineering</p>
+											<h3><span class="course-code">ME 360</span> Signal Processing</h3>
+										</div>
+										<div class="course-glyph"><svg viewBox="0 0 160 60" aria-hidden="true"><line x1="0" y1="30" x2="160" y2="30" class="ax"/><path d="M0 30 Q10 6 20 30 T40 30 T60 30 T80 30 T100 30 T120 30 T140 30 T160 30" class="ln"/><g class="dt"><circle cx="10" cy="12" r="3"/><circle cx="30" cy="48" r="3"/><circle cx="50" cy="12" r="3"/><circle cx="70" cy="48" r="3"/><circle cx="90" cy="12" r="3"/><circle cx="110" cy="48" r="3"/><circle cx="130" cy="12" r="3"/><circle cx="150" cy="48" r="3"/></g></svg></div>
+									</div>
+									<p class="course-desc">A first course in signals and systems. On the signals side: Fourier analysis of analog and discrete-time signals, moving between time and frequency domains, sampling and aliasing. On the systems side: Laplace and z-transforms, impulse response and convolution. The ideas are applied to filter design, feedback control and simple machine learning.</p>
+									<ul class="course-topics"><li>Fourier series &amp; transforms</li><li>Sampling &amp; aliasing</li><li>Laplace &amp; z-transforms</li><li>Convolution</li><li>Filter design</li><li>PI control</li><li>Perceptron &amp; linear regression</li></ul>
+									<dl class="course-facts">
+										<div><dt>Prerequisite</dt><dd>ME 340, Dynamics of Mechanical Systems</dd></div>
+										<div><dt>Credit</dt><dd>3.5 hours, lecture plus lab</dd></div>
+										<div><dt>Texts</dt><dd>Course notes; Ambardar, <cite>Analog and Digital Signal Processing</cite>, 2nd ed.</dd></div>
+									</dl>
+									<div class="course-links">
+										<a class="button" href="https://mechse.illinois.edu/graduate/graduate-course-offerings/ME360">Course page</a>
+										<a class="button alt" href="https://canvas.illinois.edu/">Canvas (enrolled students)</a>
+									</div>
+								</div>
+								<div class="course-notes">
+									<h4>Lecture notes</h4>
+									<ol class="notes-list">
+											<li class="notes-empty">Lecture notes will be posted here. <!-- Add a line like the ones in TAM 541 for each week. --></li>
+									</ol>
+								</div>
+							</article>
+							<!-- TAM 541 -->
+							<article class="course" id="tam541" aria-label="TAM 541 Mathematical Methods I" role="group" aria-roledescription="course">
+								<div class="course-main">
+									<div class="course-head">
+										<div>
+											<p class="course-level">Graduate</p>
+											<h3><span class="course-code">TAM 541</span> Mathematical Methods I</h3>
+										</div>
+										<div class="course-glyph"><svg viewBox="0 0 160 60" aria-hidden="true"><line x1="40" y1="30" x2="120" y2="30" class="ax"/><line x1="80" y1="4" x2="80" y2="56" class="ax"/><circle cx="80" cy="30" r="20" class="ln"/><path d="M98 21 l5 -2 l-1 5" class="ln"/><circle cx="90" cy="24" r="3" class="dt"/><text x="94" y="20" class="lb">z&#8320;</text></svg></div>
+									</div>
+									<p class="course-desc">The mathematics behind engineering analysis. Vector and tensor algebra and complex-variable methods; ordinary differential equations, including existence and uniqueness; analytic and numerical solution methods, power series and special functions; eigenvalue problems, Green&rsquo;s functions, Laplace transforms and stability of solutions, with applications drawn from mechanics.</p>
+									<ul class="course-topics"><li>Complex analysis</li><li>Residue theorem</li><li>Vector &amp; inner product spaces</li><li>Linear operators</li><li>Eigenproblems</li><li>ODEs &amp; linear systems</li></ul>
+									<dl class="course-facts">
+										<div><dt>Prerequisites</dt><dd>MATH 241 or MATH 380; and one of MATH 385, MATH 386 or MATH 441</dd></div>
+										<div><dt>Supplementary text</dt><dd>Greenberg, <cite>Advanced Engineering Mathematics</cite></dd></div>
+									</dl>
+									<div class="course-links">
+										<a class="button" href="https://catalog.illinois.edu/courses-of-instruction/tam/">Course catalog</a>
+										<a class="button alt" href="https://canvas.illinois.edu/">Canvas (enrolled students)</a>
+									</div>
+								</div>
+								<div class="course-notes">
+									<h4>Lecture notes</h4>
+									<ol class="notes-list">
+											<li><span class="wk">1</span><a href="https://drive.google.com/file/d/1SAJ36JdJ1-vkswWIcsUjy1osokfOQrj3/view?usp=sharing">Complex numbers</a></li>
+											<li><span class="wk">2</span><a href="https://drive.google.com/file/d/1tY1ZN4NXrE06mux_lDc90VWiNjUds1Eh/view?usp=sharing">Functions on complex numbers</a></li>
+											<li><span class="wk">3</span><a href="https://drive.google.com/file/d/1_9cAgSw8Fjo8wOGcCetVcqZNZ9cKrK-z/view?usp=sharing">Cauchy&ndash;Riemann condition</a></li>
+											<li><span class="wk">4</span><a href="https://drive.google.com/file/d/1YO5e76sui2X2awjCTJHzqfd9ZBOSZpMc/view?usp=sharing">Complex integration; Cauchy&ndash;Goursat theorem</a></li>
+											<li><span class="wk">5</span><a href="https://drive.google.com/file/d/15vWh6B7nPQOXULe8jV43z_rRi7iQSqWZ/view?usp=sharing">Cauchy integral formula; Taylor and Laurent series</a></li>
+											<li><span class="wk">6</span><a href="https://drive.google.com/file/d/1yRxC29oTLRL07uE1dt378ZwNv_oeo_S8/view?usp=sharing">Laurent series and its application; residue theorem</a></li>
+											<li><span class="wk">7</span><a href="https://drive.google.com/file/d/1vY8xsAhUAi5uDvsvPiH0Z9alNvPlpihj/view?usp=sharing">Vector spaces and change of basis</a></li>
+											<li><span class="wk">8</span><a href="https://drive.google.com/file/d/1XelMr11vQYgOG_BJLfVbrVfI9sRXcSzR/view?usp=sharing">Inner product spaces</a></li>
+											<li><span class="wk">9</span><a href="https://drive.google.com/file/d/1E9Z1n1tZ_VOLnJRUMCDBfIgRfOc85SLa/view?usp=sharing">Gram&ndash;Schmidt; least squares; linear operators</a></li>
+											<li><span class="wk">10</span><a href="https://drive.google.com/file/d/1FtGFCChU3QipsPl9UJ7qgrbTA0nDGoNo/view?usp=sharing">Range and null spaces; eigenvectors</a></li>
+											<li><span class="wk">11</span><a href="https://drive.google.com/file/d/1Nugaadn8G6LT-DfcCiaZVHT3ALt7fOS0/view?usp=sharing">Tensor representation of symmetric operators</a></li>
+											<li><span class="wk">12</span><a href="https://drive.google.com/file/d/1srFfZu1t19W4bqicOlBJSLOtL7aY9NIp/view?usp=sharing">Ordinary differential equations</a></li>
+											<li><span class="wk">13</span><a href="https://drive.google.com/file/d/1w_ifwP6RC_n096ba7GtW4RhHsYSCdbFf/view?usp=sharing">Variation of constants formula</a></li>
+											<li><span class="wk">14</span><a href="https://drive.google.com/file/d/1ueciCZ4BXl0jt3gbvMB6vA42tDptukmo/view?usp=sharing">Linear systems</a></li>
+									</ol>
+								</div>
+							</article>
+							<!-- TAM 542 -->
+							<article class="course" id="tam542" aria-label="TAM 542 Mathematical Methods II" role="group" aria-roledescription="course">
+								<div class="course-main">
+									<div class="course-head">
+										<div>
+											<p class="course-level">Graduate &middot; continues TAM 541</p>
+											<h3><span class="course-code">TAM 542</span> Mathematical Methods II</h3>
+										</div>
+										<div class="course-glyph"><svg viewBox="0 0 160 60" aria-hidden="true"><line x1="10" y1="50" x2="150" y2="50" class="ax"/><path d="M10 50 Q80 -10 150 50" class="ln"/><path d="M10 50 Q80 15 150 50" class="ln op"/><path d="M10 50 Q80 34 150 50" class="ln op2"/><circle cx="80" cy="20" r="3" class="dt"/></svg></div>
+									</div>
+									<p class="course-desc">The continuation of TAM 541. Modeling and inequalities, elements of functional analysis; partial differential equations, existence and uniqueness, second-order equations and hyperbolic conservation laws; numerical methods, eigenfunction expansions, integral transforms and fundamental solutions, with applications drawn from mechanics.</p>
+									<ul class="course-topics"><li>Functional analysis</li><li>PDEs</li><li>Conservation laws</li><li>Eigenfunction expansions</li><li>Integral transforms</li><li>Fundamental solutions</li></ul>
+									<dl class="course-facts">
+										<div><dt>Prerequisite</dt><dd>TAM 541</dd></div>
+										<div><dt>Supplementary text</dt><dd>Greenberg, <cite>Advanced Engineering Mathematics</cite></dd></div>
+									</dl>
+									<div class="course-links">
+										<a class="button" href="https://catalog.illinois.edu/courses-of-instruction/tam/">Course catalog</a>
+										<a class="button alt" href="https://canvas.illinois.edu/">Canvas (enrolled students)</a>
+									</div>
+								</div>
+								<div class="course-notes">
+									<h4>Lecture notes</h4>
+									<ol class="notes-list">
+											<li class="notes-empty">Lecture notes will be posted here. <!-- Add a line like the ones in TAM 541 for each week. --></li>
+									</ol>
+								</div>
+							</article>
+							<!-- ECE 515 -->
+							<article class="course" id="ece515" aria-label="ECE 515 Control System Theory &amp; Design" role="group" aria-roledescription="course">
+								<div class="course-main">
+									<div class="course-head">
+										<div>
+											<p class="course-level">Graduate &middot; same as ME 540 and SE 522</p>
+											<h3><span class="course-code">ECE 515</span> Control System Theory &amp; Design</h3>
+										</div>
+										<div class="course-glyph"><svg viewBox="0 0 160 60" aria-hidden="true"><rect x="45" y="10" width="70" height="26" rx="4" class="ln"/><text x="80" y="27" class="lb mid">&#7819; = Ax + Bu</text><path d="M12 23 H45 M115 23 H148" class="ln"/><path d="M132 23 V50 H28 V23" class="ln op"/><circle cx="28" cy="23" r="3" class="dt"/></svg></div>
+									</div>
+									<p class="course-desc">Feedback control systems from the state-space point of view: basic principles, modeling, analysis, stability, structural properties such as controllability and observability, optimization, and design to meet specifications.</p>
+									<ul class="course-topics"><li>Linear algebra for control</li><li>Solution of linear ODEs</li><li>Lyapunov stability</li><li>Controllability &amp; observability</li><li>Realization theory</li><li>Observer design</li><li>Optimal control</li></ul>
+									<dl class="course-facts">
+										<div><dt>Prerequisite</dt><dd>ECE 486, or an equivalent first course in control</dd></div>
+										<div><dt>Credit</dt><dd>4 hours</dd></div>
+										<div><dt>Cross-listed</dt><dd>ME 540, SE 522</dd></div>
+										<div><dt>Reference</dt><dd>Ba&#351;ar, Meyn &amp; Perkins, <cite>Lecture Notes on Control System Theory and Design</cite> (<a href="https://arxiv.org/abs/2007.01367">free on arXiv</a>)</dd></div>
+									</dl>
+									<div class="course-links">
+										<a class="button" href="https://courses.grainger.illinois.edu/ece515">Course page</a>
+										<a class="button alt" href="https://canvas.illinois.edu/">Canvas (enrolled students)</a>
+									</div>
+								</div>
+								<div class="course-notes">
+									<h4>Lecture notes</h4>
+									<ol class="notes-list">
+											<li><span class="wk">1</span><a href="https://drive.google.com/file/d/104ffImk7TRzhYnF3rJCiz-uwS-1WgrAK/view?usp=sharing">Examples of linear systems</a></li>
+											<li><span class="wk">2</span><a href="https://drive.google.com/file/d/1VI3dnxQIF2p9UKBt9p6lMUlrbHaFWskr/view?usp=sharing">Linear spaces and transformations</a></li>
+											<li><span class="wk">3</span><a href="https://drive.google.com/file/d/1SqmnfwxUANWm_4iRwl2CUAXHYuJsC5GR/view?usp=sharing">Eigenvalues and eigenvectors</a></li>
+											<li><span class="wk">4</span><a href="https://drive.google.com/file/d/1U7_EkxG1v0YmztjSlMsCigbYN-41oMBe/view?usp=sharing">Variation-of-constants solution formula</a></li>
+											<li><span class="wk">5</span><a href="https://drive.google.com/file/d/1srs7oQxuI8zb6AX27ytAO0LgLjhnXWqw/view?usp=sharing">Fundamental solution matrix and Jordan decomposition</a></li>
+											<li><span class="wk">6</span><a href="https://drive.google.com/file/d/1iwPjylBienAB-ktNaKC0xnXL76a5f7bc/view?usp=sharing">Lyapunov stability: definitions and the direct method</a></li>
+											<li><span class="wk">7</span><a href="https://drive.google.com/file/d/1IVLPcS50bBE-MOkL2uMqTwttFDX3JLWd/view?usp=sharing">Inner products and norms</a></li>
+											<li><span class="wk">8</span><a href="https://drive.google.com/file/d/1eq8mpIC8MLyDvyQXBECfO7ZoldI3i9am/view?usp=sharing">Lyapunov theory for LTI systems</a></li>
+											<li><span class="wk">9</span><a href="https://drive.google.com/file/d/1czm3jQ437wj1t_uue-fmvf0bo39p9Xtc/view?usp=sharing">Range and null space</a></li>
+											<li><span class="wk">10</span><a href="https://drive.google.com/file/d/1uSojJ19rguWkZwELHAnXBnIHCTmghBtY/view?usp=sharing">Controllability and observability</a></li>
+											<li><span class="wk">11</span><a href="https://drive.google.com/file/d/1FiOY6TON8UtZkta5v27U0xVZYNYplvsV/view?usp=sharing">Kalman&rsquo;s controllability and observability decomposition</a></li>
+											<li><span class="wk">11</span><a href="https://drive.google.com/file/d/1cQMCp__Ug8G-sOTmLka_oH_cFtW0APcA/view?usp=sharing">Realization theory</a></li>
+											<li><span class="wk">12</span><a href="https://drive.google.com/file/d/19-5nEEYtzRsIQDyx_KINrUHlqrgsHCpe/view?usp=sharing">Control and observer design</a></li>
+											<li><span class="wk">13</span><a href="https://drive.google.com/file/d/1LiBN-5_qUBjmkBUoNfrw08neHfYU-V3p/view?usp=sharing">Optimal control of linear systems</a></li>
+									</ol>
+								</div>
+							</article>
+							<!-- ECE 528 -->
+							<article class="course" id="ece528" aria-label="ECE 528 Analysis of Nonlinear Systems" role="group" aria-roledescription="course">
+								<div class="course-main">
+									<div class="course-head">
+										<div>
+											<p class="course-level">Graduate &middot; same as ME 546 and SE 520</p>
+											<h3><span class="course-code">ECE 528</span> Analysis of Nonlinear Systems</h3>
+										</div>
+										<div class="course-glyph"><svg viewBox="0 0 160 60" aria-hidden="true"><line x1="40" y1="30" x2="120" y2="30" class="ax"/><line x1="80" y1="4" x2="80" y2="56" class="ax"/><path d="M80 30 m0 -4 a4 4 0 1 1 -4 4 a8 8 0 1 1 8 8 a13 13 0 1 1 -13 -13 a19 19 0 1 1 19 19" class="ln"/><circle cx="80" cy="30" r="3" class="dt"/></svg></div>
+									</div>
+									<p class="course-desc">Nonlinear dynamic systems: the phase plane and phenomena with no linear counterpart, stability, invariance theory, asymptotic methods and feedback design.</p>
+									<ul class="course-topics"><li>Phase plane analysis</li><li>Limit cycles</li><li>Lyapunov stability</li><li>LaSalle invariance</li><li>Perturbation &amp; averaging</li><li>Nonlinear feedback design</li></ul>
+									<dl class="course-facts">
+										<div><dt>Prerequisites</dt><dd>ECE 515; and MATH 444 or MATH 447</dd></div>
+										<div><dt>Credit</dt><dd>4 hours</dd></div>
+										<div><dt>Cross-listed</dt><dd>ME 546, SE 520</dd></div>
+									</dl>
+									<div class="course-links">
+										<a class="button" href="https://courses.grainger.illinois.edu/ece528">Course page</a>
+										<a class="button alt" href="https://canvas.illinois.edu/">Canvas (enrolled students)</a>
+									</div>
+								</div>
+								<div class="course-notes">
+									<h4>Lecture notes</h4>
+									<ol class="notes-list">
+											<li class="notes-empty">Lecture notes will be posted here. <!-- Add a line like the ones in TAM 541 for each week. --></li>
+									</ol>
+								</div>
+							</article>
+								</div>
+								<button type="button" class="course-arrow course-next" aria-label="Next course">&rarr;</button>
+							</div>
+
+							<div class="course-dots" role="group" aria-label="Course"></div>
+							<p class="course-hint">Swipe, use the arrows, or pick a course above.</p>
+						</section>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="footer-grid">
+							<section>
+								<h3>Visit or write</h3>
+								<p>
+									Prof. Prashant G. Mehta<br />
+									Department of Mechanical Science and Engineering<br />
+									Sidney Lu Mechanical Engineering Building<br />
+									1206 W. Green Street, Urbana, IL 61801
+								</p>
+								<p><a href="mailto:mehtapg@illinois.edu">mehtapg@illinois.edu</a></p>
+							</section>
+							<section>
+								<h3>Elsewhere</h3>
+								<ul class="plain-links">
+									<li><a href="https://scholar.google.com/citations?user=wv9XU7gAAAAJ&amp;hl=en">Google Scholar</a></li>
+									<li><a href="https://csl.illinois.edu/">Coordinated Science Laboratory</a></li>
+									<li><a href="https://mechse.illinois.edu/">Illinois MechSE</a></li>
+									<li><a href="https://www.linkedin.com/in/mehtapg/">LinkedIn</a></li>
+								</ul>
+							</section>
+							<section>
+								<h3>Affiliations</h3>
+								<p>
+									The group is part of MechSE and affiliated with the Coordinated Science Laboratory,
+									Electrical and Computer Engineering, and the Neuroscience Program at Illinois.
+								</p>
+							</section>
+						</div>
+
+						<div id="copyright">
+							<ul class="menu">
+								<li>&copy; <span class="js-year">2026</span> Mehta Research Group. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/mehta.js"></script>
+			<script src="assets/js/fourier-hero.js"></script>
+			<script src="assets/js/course-wall.js"></script>
+			<script>document.querySelectorAll('.js-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
+
+	</body>
+</html>

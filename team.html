@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<!--
+	Mehta Research Group, University of Illinois Urbana-Champaign
+	Built on TXT by HTML5 UP (html5up.net | @ajlkn), CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Team | Mehta Lab</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="People of the Mehta Lab at Illinois: principal investigator, postdocs, graduate students and alumni." />
+		<meta property="og:title" content="Team | Mehta Lab" />
+		<meta property="og:description" content="People of the Mehta Lab at Illinois: principal investigator, postdocs, graduate students and alumni." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/mehta.css" />
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="logo container">
+						<div>
+							<h1><a href="index.html" id="logo">Mehta Lab</a></h1>
+							<p>Mechanical Science and Engineering, University of Illinois Urbana-Champaign</p>
+						</div>
+					</div>
+				</header>
+
+			<!-- Nav (dropdowns are handled by jquery.dropotron; on phones main.js turns this into a slide-out panel) -->
+				<nav id="nav">
+					<ul>
+					<li><a href="index.html">Home</a></li>
+					<li class="current"><a href="team.html">Team</a></li>
+					<li>
+						<a href="research.html">Research</a>
+						<ul>
+							<li><a href="research.html#rl-hmm">Reinforcement Learning &amp; HMMs</a></li>
+							<li><a href="research.html#filtering">Particle &amp; Nonlinear Filtering</a></li>
+							<li><a href="research.html#kalman">Kalman Filtering &amp; Stochastic Control</a></li>
+							<li><a href="research.html#soft-robotics">Past Projects</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="teaching.html">Teaching</a>
+						<ul>
+							<li><a href="teaching.html#me360">ME 360 Signal Processing</a></li>
+							<li><a href="teaching.html#tam541">TAM 541 Mathematical Methods I</a></li>
+							<li><a href="teaching.html#tam542">TAM 542 Mathematical Methods II</a></li>
+							<li><a href="teaching.html#ece515">ECE 515 Control System Theory &amp; Design</a></li>
+							<li><a href="teaching.html#ece528">ECE 528 Analysis of Nonlinear Systems</a></li>
+						</ul>
+					</li>
+					<li><a href="awards.html">Awards</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					</ul>
+				</nav>
+
+			<!-- Hero: coupled oscillators falling into step (assets/js/sync-hero.js) -->
+				<section id="banner" class="fpf-hero is-short" style="background-image: url('images/team-photo.jpg'); background-size: cover; background-position: center 80%;">
+					<canvas id="sync-canvas" aria-label="Animation: dots moving round a box gradually fall into step with each other. Click to scatter them." role="img"></canvas>
+					<h2 class="hero-phrase">Our Team</h2>
+					<div class="hero-caption">
+						<p><span class="key particle"></span>team members <span class="key truth"></span>shared rhythm</p>
+						<label class="hero-slider" for="sync-k">Coupling <input type="range" id="sync-k" min="0" max="3" step="0.1" /> <output id="sync-k-value">1.6</output></label>
+						<div class="hero-controls">
+							<button type="button" id="sync-scatter">Scatter</button>
+							<button type="button" id="sync-pause" aria-pressed="false">Pause</button>
+						</div>
+					</div>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<header class="page-intro">
+							<p>
+								The animation above is a Kuramoto model: seventy oscillators, each with its own natural frequency, pulled toward the group&rsquo;s average. The model is a metaphor for our team.
+							</p>
+						</header>
+
+						<!-- Principal investigator -->
+						<section class="pi" id="pi">
+							<img class="avatar" src="images/team/Dr_Mehta.jpeg" alt="Portrait of Prashant G. Mehta" />
+							<div>
+								<p class="role">Principal investigator</p>
+								<h3>Prashant G. Mehta</h3>
+								<p>
+									Prashant is a Professor of Mechanical Science and Engineering at Illinois, and is also affiliated with the Coordinated Science Laboratory,
+									Electrical and Computer Engineering, and the Neuroscience Program. He received his M.S. in Electrical and Computer Engineering
+									from UMass Amherst in 1996 and his Ph.D. in Applied Mathematics from Cornell in 2004.
+								</p>
+								<p>
+									Before joining Illinois in 2005, he worked at United Technologies Research Center, where he invented the
+									<a href="https://dsweb.siam.org/The-Magazine/All-Issues/dynamical-systems-in-jet-engines-a-symmetry-based-approach">symmetry-breaking solution</a>
+									to combustion instabilities. It solved a sixty-year-old open problem and is now standard in Pratt &amp; Whitney jet engines and afterburners.
+									He also co-founded the startup Rithmio, whose gesture recognition technology was acquired by Bosch Sensortec in 2017.
+								</p>
+								<p>
+									His best-known recent contribution is the <a href="research.html#fpf">feedback particle filter</a>, and in 2024 he was named an
+									<a href="awards.html">IEEE Fellow</a> for contributions to nonlinear filtering. He teaches signal processing, control and the
+									graduate engineering mathematics sequence, his courses regularly appear on the List of Teachers Ranked as Excellent, and he has served as an
+									associate editor of IEEE Transactions on Automatic Control.
+								</p>
+								<div class="facts">
+									<a href="https://drive.google.com/file/d/1SQeKLdTJq44rXfmKR1P66_IxAr-got_6/view?usp=sharing">Two-page bio sketch (PDF)</a>
+									<a href="https://drive.google.com/file/d/1z205iQXmo0GIrWGlg_DDm7w2Muv0X89o/view?usp=sharing">Curriculum vitae (PDF)</a>
+									<a href="https://scholar.google.com/citations?user=wv9XU7gAAAAJ&amp;hl=en">Google Scholar</a>
+									<a href="https://www.linkedin.com/in/mehtapg/">LinkedIn</a>
+								</div>
+							</div>
+						</section>
+
+						<!-- Postdoc -->
+						<h2 class="major"><span>Postdoctoral researcher</span></h2>
+						<div class="people">
+							<article class="person">
+								<img class="avatar" src="images/team/Heng-Sheng.jpeg" alt="Portrait of Heng-Sheng Chang" />
+								<div>
+									<h4>Heng-Sheng (Hanson) Chang</h4>
+									<p class="role">Postdoc, Ph.D. Illinois 2025</p>
+									<p class="bio">
+										His doctorate was on energy shaping control for soft actuators, combining design, simulation and experiments.
+										He won the Robert E. Miller Excellence in Teaching Award as teaching fellow for ME 360. As a postdoc he now works on language modeling.
+									</p>
+									<div class="links">
+										<a href="https://hanson-hschang.github.io/">Website</a>
+										<a href="https://www.linkedin.com/in/hanson-hschang/">LinkedIn</a>
+										<a href="mailto:hschang2@illinois.edu">hschang2@illinois.edu</a>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<!-- Graduate students -->
+						<h2 class="major"><span>Graduate students</span></h2>
+						<div class="people">
+							<article class="person">
+								<img class="avatar" src="images/team/Aditye_Kudre.jpeg" alt="Portrait of Aditya Kudre" />
+								<div>
+									<h4>Aditya Kudre</h4>
+									<p class="role">Ph.D. student, ECE</p>
+									<p class="bio">
+										Language modeling through nonlinear filtering and optimal control. With Heng-Sheng, he uses hidden Markov models and their
+										higher-order variants to study token prediction and transformer-like architectures.
+									</p>
+									<div class="links">
+										<a href="https://quantumcoder121.github.io/">Website</a>
+										<a href="mailto:akudre2@illinois.edu">akudre2@illinois.edu</a>
+									</div>
+								</div>
+							</article>
+
+							<article class="person">
+								<img class="avatar" src="images/team/Jiangjun_Yu.jpg" alt="Portrait of Jiangjun (Alex) Yu" />
+								<div>
+									<h4>Jiangjun (Alex) Yu</h4>
+									<p class="role">Ph.D. student</p>
+									<p class="bio">
+										Mean-field games and neural algorithms for large interacting systems. He studies collective dynamics and cross-frequency coupling
+										with oscillator models and McKean&ndash;Vlasov formulations.
+									</p>
+									<div class="links">
+										<a href="https://www.linkedin.com/in/alexjiangjunyu">LinkedIn</a>
+										<a href="mailto:jy48@illinois.edu">jy48@illinois.edu</a>
+									</div>
+								</div>
+							</article>
+
+							<article class="person">
+								<img class="avatar" src="images/team/Anant_Joshi.jpg" alt="Portrait of Anant Joshi" />
+								<div>
+									<h4>Anant Joshi</h4>
+									<p class="role">Ph.D. student</p>
+									<p class="bio">
+										Particle methods for observer design, applied to reinforcement learning. He studies the ensemble Kalman filter and how
+										the same idea can solve the optimal control problems that appear in RL.
+									</p>
+									<div class="links">
+										<a href="https://anantjoshi97.github.io/website/">Website</a>
+										<a href="mailto:anantaj2@illinois.edu">anantaj2@illinois.edu</a>
+									</div>
+								</div>
+							</article>
+
+							<article class="person is-new">
+								<img class="avatar" src="images/team/Malik_Rauf.jpg" alt="Portrait of Malik Nauman Rauf" />
+								<div>
+									<h4>Malik Nauman Rauf</h4>
+									<p class="role">Ph.D. student</p>
+									<p class="bio">
+										Flight mechanics, astrodynamics, learning, estimation and optimal control. He joined in 2026 after an M.S. in aerospace engineering
+										at Georgia Tech, where he worked on optimal control of hybrid systems.
+									</p>
+									<div class="links">
+										<a href="https://maliknaumanrauf.me/">Website</a>
+										<a href="https://scholar.google.com/citations?user=me0X5LUAAAAJ&amp;hl=en">Scholar</a>
+										<a href="mailto:mnrauf2@illinois.edu">mnrauf2@illinois.edu</a>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<!-- Alumni -->
+						<h2 class="major" id="alumni"><span>Alumni</span></h2>
+						<p class="alumni-note">Where our graduates went: faculty positions in the US and Korea, startups, and research and engineering roles across industry.</p>
+
+						<div class="table-scroll">
+							<table class="alumni">
+								<caption>Ph.D.</caption>
+								<thead>
+									<tr><th scope="col">Name</th><th scope="col">Year</th><th scope="col">Now</th><th scope="col">Thesis</th></tr>
+								</thead>
+								<tbody>
+									<!-- Checked Nov 2026 against IDEALS, university pages and personal sites. "Now" left blank where no current position could be confirmed. -->
+									<tr><td class="name"><a href="https://www.linkedin.com/in/sukru-yagiz-olmez-7825b6a6/">S. Yagiz Olmez</a></td><td class="year">2025</td><td class="now">Controls Engineer at Aselsan, Turkey</td><td><a href="https://www.ideals.illinois.edu/items/139731">Applications of Jump Processes in Epidemiology and Neuroscience</a></td></tr>
+									<tr><td class="name"><a href="http://linkedin.com/in/tixianw">Tixian Wang</a></td><td class="year">2025</td><td class="now">Industrial Engineer, South-Korea;</td><td><a href="https://www.ideals.illinois.edu/items/137052">Modeling and Algorithms for Sensorimotor Control of a Soft Continuum Arm</a></td></tr>
+									<tr><td class="name"><a href="http://linkedin.com/in/hanson-hschang/">Heng-Sheng Chang</a></td><td class="year">2025</td><td class="now">Postdoctoral Researcher, Illinois</td><td><a href="https://www.ideals.illinois.edu/items/136272">Energy Based Modeling, Control and Reconstruction of Soft Continuum Arm</a></td></tr>
+									<tr><td class="name"><a href="http://linkedin.com/in/jin-won-kim-aaa39019a">Jin Won Kim</a></td><td class="year">2022</td><td class="now">Assistant Professor, Mechanical &amp; System Design Engineering, Hongik University, Seoul</td><td><a href="https://www.ideals.illinois.edu/items/125340">Duality for Nonlinear Filtering</a></td></tr>
+									<tr><td class="name"><a href="https://publish.illinois.edu/amirtaghvaei/">Amirhossein Taghvaei</a></td><td class="year">2019</td><td class="now">Assistant Professor, Aeronautics &amp; Astronautics, University of Washington</td><td><a href="https://www.ideals.illinois.edu/handle/2142/105673">Design and Analysis of Particle-based Algorithms for Nonlinear Filtering and Sampling</a></td></tr>
+									<tr><td class="name"><a href="https://www.linkedin.com/in/chizhanguiuc/">Chi Zhang</a></td><td class="year">2017</td><td class="now">Data Scientist, Experian DataLabs</td><td><a href="https://www.ideals.illinois.edu/handle/2142/97376">Controlled Particle Systems for Nonlinear Filtering and Global Optimization</a></td></tr>
+									<tr><td class="name">Adam Tilton</td><td class="year">2015</td><td class="now">Co-founder, Driver (previously Senior Director, Nike)</td><td>&ldquo;Almost Ph.D.&rdquo; for <a href="https://scholar.google.com/citations?user=jmREKGIAAAAJ&amp;hl=en">contributions to machine learning for motion sensing</a></td></tr>
+									<tr><td class="name"><a href="http://www.linkedin.com/in/taoyang621">Tao Yang</a></td><td class="year">2014</td><td class="now">Data Scientist, Facebook</td><td><a href="https://www.ideals.illinois.edu/handle/2142/50708">Feedback Particle Filter and its Applications</a></td></tr>
+									<tr><td class="name"><a href="https://www.linkedin.com/in/kundeng2/">Kun Deng</a></td><td class="year">2013</td><td class="now">VP of Intelligent Application Engineering, Black Sesame Technologies</td><td><a href="https://www.ideals.illinois.edu/handle/2142/42225">Model Reduction of Markov Chains with Application to Building Systems</a></td></tr>
+									<tr><td class="name"><a href="https://www.linkedin.com/in/huibingyin">Huibing Yin</a></td><td class="year">2012</td><td class="now">Software Engineer, Yahoo!</td><td><a href="https://www.ideals.illinois.edu/handle/2142/30922">Noncooperative Static and Dynamic Games: Addressing Shared Constraints and Phase Transitions</a></td></tr>
+									<tr><td class="name"><a href="https://www.linkedin.com/in/yu-sun-b228aba/">Yu Sun</a></td><td class="year">2011</td><td class="now">Senior Software Engineer, LinkedIn</td><td><a href="https://www.ideals.illinois.edu/handle/2142/29705">An Information Theoretic Study of Modeling and Control of Dynamical Systems</a></td></tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="row gtr-150">
+							<div class="col-7 col-12-medium">
+								<div class="table-scroll">
+									<table class="alumni">
+										<caption>M.S.</caption>
+										<thead>
+											<tr><th scope="col">Name</th><th scope="col">Year</th><th scope="col">Now</th></tr>
+										</thead>
+										<tbody>
+											<tr><td class="name"><a href="https://www.linkedin.com/in/arorarohan/">Rohan Arora</a></td><td class="year">2016</td><td class="now">Technical Lead, IBM T. J. Watson Research Center</td></tr>
+											<tr><td class="name"><a href="https://www.linkedin.com/in/shane-ghiotto-34b4013b/">Shane Ghiotto</a></td><td class="year">2014</td><td class="now">Principal Engineer, Nike</td></tr>
+											<tr><td class="name"><a href="https://www.linkedin.com/in/krishnamedarametla/">Krishna Medarametla</a></td><td class="year">2014</td><td class="now">Senior Manager, HighRadius</td></tr>
+											<tr><td class="name"><a href="https://www.linkedin.com/in/joseph-niedbalski-53a3709/">Joseph Niedbalski</a></td><td class="year">2007</td><td class="now">Senior Principal Mechanical Engineer, Abbott, Chicago</td></tr>
+											<tr><td class="name"><a href="https://www.linkedin.com/in/pwang/">Paul Wang</a></td><td class="year">2007</td><td class="now">Associate, Merrill Lynch, Hong Kong</td></tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="col-5 col-12-medium">
+								<div class="table-scroll">
+									<table class="alumni" style="min-width: 0">
+										<caption>Postdoctoral</caption>
+										<thead>
+											<tr><th scope="col">Name</th><th scope="col">Now</th></tr>
+										</thead>
+										<tbody>
+											<tr><td class="name"><a href="https://sites.google.com/view/udithalder/">Udit Halder</a></td><td class="now">Assistant Professor, Mechanical &amp; Aerospace Engineering, University of South Florida</td></tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="footer-grid">
+							<section>
+								<h3>Contact</h3>
+								<p>
+									Prof. Prashant G. Mehta<br />
+									Coordinated Science Laboratory<br />
+									1308 W. Main St., Urbana, IL 61801, USA
+								</p>
+								<p><a href="mailto:mehtapg@illinois.edu">mehtapg@illinois.edu</a></p>
+							</section>
+							<section>
+								<h3>Elsewhere</h3>
+								<ul class="plain-links">
+									<li><a href="https://scholar.google.com/citations?user=wv9XU7gAAAAJ&amp;hl=en">Google Scholar</a></li>
+									<li><a href="https://csl.illinois.edu/">Coordinated Science Laboratory</a></li>
+									<li><a href="https://mechse.illinois.edu/">Illinois MechSE</a></li>
+									<li><a href="https://www.linkedin.com/in/mehtapg/">LinkedIn</a></li>
+								</ul>
+							</section>
+							<section>
+								<h3>Affiliations</h3>
+								<p>
+									The group is part of MechSE and affiliated with the Coordinated Science Laboratory,
+									Electrical and Computer Engineering, and the Neuroscience Program at Illinois.
+								</p>
+							</section>
+						</div>
+
+						<div id="copyright">
+							<ul class="menu">
+								<li>&copy; <span class="js-year">2026</span> Mehta Research Group. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/mehta.js"></script>
+			<script src="assets/js/sync-hero.js"></script>
+			<script>document.querySelectorAll('.js-year').forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
+
+	</body>
+</html>
