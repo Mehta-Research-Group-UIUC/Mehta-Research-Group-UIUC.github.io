@@ -15,14 +15,16 @@
 
 	// Old anchors (home page, menus, other sites) -> new tab ids
 	var legacy = {
-		'reinforcement-learning': 'rl-hmm',
+		'rl-hmm': 'transformers',
+		'reinforcement-learning': 'filtering',
+		'kalman': 'filtering',
 		'fpf': 'filtering',
 		'nonlinear-filtering': 'filtering',
-		'epidemiology': 'epidemiology',
-		'soft-robotics': 'soft-robotics',
+		'rhythms': 'neuroscience',
+		'past-rhythms': 'neuroscience',
+		'sensorimotor': 'soft-robotics',
+		'past-sensorimotor': 'soft-robotics',
 		'past': 'soft-robotics',
-		'past-sensorimotor': 'sensorimotor',
-		'past-rhythms': 'rhythms',
 		'past-mfg': 'mfg'
 	};
 
