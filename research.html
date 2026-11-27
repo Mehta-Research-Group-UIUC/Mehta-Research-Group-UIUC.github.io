@@ -291,8 +291,11 @@
 												broader class of controlled interacting particle systems, related to the ensemble Kalman filter.
 											</p>
 											<p>
-												Duality carries these algorithms over to control: the <strong>dual ensemble Kalman filter</strong> solves stochastic optimal
-												control problems by simulation, and interacting particles greatly speed up reinforcement learning in the linear quadratic setting.
+												The same ideas carry over to control. Anant Joshi&rsquo;s work uses <strong>log transform duality</strong> for stochastic
+												control and reinforcement learning: the log transform converts the cost function into a probability density, and an
+												interacting particle system is used to sample from it. The construction is inspired by the success of interacting particle
+												methods such as the ensemble Kalman filter in filtering. The resulting algorithms, including the
+												<strong>dual ensemble Kalman filter</strong>, are sample efficient compared with benchmark algorithms on high-dimensional problems.
 											</p>
 										</div>
 										<div class="rpanel-media">
